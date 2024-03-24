@@ -25,7 +25,6 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 #### O que foi feito:
 1. O squad discutiu a modelagem do banco;
 2. Anafbarreto fez as primeiras configurações do projeto
-3. Criou as tabelas do banco de dados
 
 ### Criar pagina inicial:
 
