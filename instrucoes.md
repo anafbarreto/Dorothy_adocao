@@ -7,6 +7,11 @@ Se rolar erro de bloqueio de excecução: Set-ExecutionPolicy -ExecutionPolicy U
 
 #### Ativar ambiente virtual
 terminal: nome\scripts\activate (usar tab para autocomplete)
+ou 
+- Atenção comando tem que ser usado dentro do ambiente virtual Abrigo_Animais
+```
+Scripts\Activate
+```
 
 #### Instalar o Django
 terminal: pip install django

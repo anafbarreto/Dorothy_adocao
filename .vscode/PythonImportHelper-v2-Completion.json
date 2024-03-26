@@ -40,12 +40,28 @@
         "documentation": {}
     },
     {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "django.db.models.deletion",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "django.db.models.deletion",
         "description": "django.db.models.deletion",
         "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
         "documentation": {}
     },
     {
@@ -73,11 +89,35 @@
         "documentation": {}
     },
     {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
         "label": "TestCase",
         "importPath": "django.test",
         "description": "django.test",
         "isExtraImport": true,
         "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -119,6 +159,14 @@
         "description": "django.urls",
         "isExtraImport": true,
         "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "importPath": "page.views",
+        "description": "page.views",
+        "isExtraImport": true,
+        "detail": "page.views",
         "documentation": {}
     },
     {
@@ -202,6 +250,24 @@
         "documentation": {}
     },
     {
+        "label": "PageConfig",
+        "kind": 6,
+        "importPath": "page.apps",
+        "description": "page.apps",
+        "peekOfCode": "class PageConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'page'",
+        "detail": "page.apps",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "page.views",
+        "description": "page.views",
+        "peekOfCode": "def home(request):\n    return render(request, 'home.html');",
+        "detail": "page.views",
+        "documentation": {}
+    },
+    {
         "label": "application",
         "kind": 5,
         "importPath": "projeto_final.asgi",
@@ -233,7 +299,7 @@
         "kind": 5,
         "importPath": "projeto_final.settings",
         "description": "projeto_final.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n   'django.contrib.staticfiles',",
         "detail": "projeto_final.settings",
         "documentation": {}
     },
@@ -242,7 +308,7 @@
         "kind": 5,
         "importPath": "projeto_final.settings",
         "description": "projeto_final.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'bootstrap5',",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n   'django.contrib.staticfiles',\n    'bootstrap5',",
         "detail": "projeto_final.settings",
         "documentation": {}
     },
@@ -251,7 +317,7 @@
         "kind": 5,
         "importPath": "projeto_final.settings",
         "description": "projeto_final.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'bootstrap5',\n    'banco',\n]",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n   'django.contrib.staticfiles',\n    'bootstrap5',\n    'banco',\n    'page',",
         "detail": "projeto_final.settings",
         "documentation": {}
     },
@@ -314,7 +380,7 @@
         "kind": 5,
         "importPath": "projeto_final.settings",
         "description": "projeto_final.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\n# Defina o diretório onde seus arquivos estáticos serão coletados\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Defina o URL base para os arquivos estáticos\nSTATIC_URL = '/static/'",
         "detail": "projeto_final.settings",
         "documentation": {}
     },
@@ -323,7 +389,7 @@
         "kind": 5,
         "importPath": "projeto_final.settings",
         "description": "projeto_final.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\n# Defina o diretório onde seus arquivos estáticos serão coletados\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Defina o URL base para os arquivos estáticos\nSTATIC_URL = '/static/'\n# Adicione o caminho para o diretório onde seus arquivos estáticos estão localizados",
         "detail": "projeto_final.settings",
         "documentation": {}
     },
@@ -332,7 +398,7 @@
         "kind": 5,
         "importPath": "projeto_final.settings",
         "description": "projeto_final.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\n# Defina o diretório onde seus arquivos estáticos serão coletados\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Defina o URL base para os arquivos estáticos\nSTATIC_URL = '/static/'\n# Adicione o caminho para o diretório onde seus arquivos estáticos estão localizados\nSTATICFILES_DIRS = [",
         "detail": "projeto_final.settings",
         "documentation": {}
     },
@@ -341,7 +407,16 @@
         "kind": 5,
         "importPath": "projeto_final.settings",
         "description": "projeto_final.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\n# Defina o diretório onde seus arquivos estáticos serão coletados\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Defina o URL base para os arquivos estáticos\nSTATIC_URL = '/static/'\n# Adicione o caminho para o diretório onde seus arquivos estáticos estão localizados\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static'),",
+        "detail": "projeto_final.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "projeto_final.settings",
+        "description": "projeto_final.settings",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Defina o URL base para os arquivos estáticos\nSTATIC_URL = '/static/'\n# Adicione o caminho para o diretório onde seus arquivos estáticos estão localizados\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static'),\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "projeto_final.settings",
         "documentation": {}
     },
@@ -350,7 +425,16 @@
         "kind": 5,
         "importPath": "projeto_final.settings",
         "description": "projeto_final.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATIC_URL = '/static/'\n# Adicione o caminho para o diretório onde seus arquivos estáticos estão localizados\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static'),\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "projeto_final.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "projeto_final.settings",
+        "description": "projeto_final.settings",
+        "peekOfCode": "STATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static'),\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "projeto_final.settings",
         "documentation": {}
     },
@@ -368,7 +452,7 @@
         "kind": 5,
         "importPath": "projeto_final.urls",
         "description": "projeto_final.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', home)\n]",
         "detail": "projeto_final.urls",
         "documentation": {}
     },
