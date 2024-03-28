@@ -7,9 +7,13 @@
     <title>Home</title>
     {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
     <link rel="stylesheet" href="{% static 'css/search.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Radley:ital@0;1&display=swap" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar bg-body-tertiary">
+    <!-- <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
         <form class="d-flex" role="search">
           <input
@@ -21,15 +25,43 @@
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
-    </nav>
+    </nav> -->
     <div class="search-container">
-      <input
-        type="search"
-        id="search-input"
-        placeholder="Pesquisar..."
-      />
+      <input type="search" id="search-input" placeholder="Pesquisar..." />
       <button id="search-button"></button>
     </div>
+    <section class="container-cards">
+    <div class="card" style="width: 18rem">
+      <img
+        src="/static/img/chico.png"
+        class="card-img-top"
+        alt="cachorro preto chamado chico da raça ... "
+        title="Cachorro chico"
+      />
+   
+        <div class="card-body">
+          <div class="text-center"> <!-- O nome do animal tambem do banco -->
+            <h5 class="card-title">CHICO<img src="/static/icon/icon-masc.png" class="icon-gender" alt=""></h5>
+            
+            <p class="card-text">Idade: 1 ano</p>
+            <!--aqui podera ser mudado para pegar a idade dinamicamente do banco-->
+            <a href="#" class="btn custom-btn">Quero adotar</a>
+          </div>
+        </div>
+      </section>
+
+      <!--to do-->>
+      
+      <!-- {% for animal in list_animals %}
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{ animal.name }}</h5>
+        <p class="card-text">Idade: {{ animal.age }} anos</p>
+        <img src="{{ animal.image_url }}" alt="{{ animal.name }}" class="img-fluid">
+        <a href="#" class="btn custom-btn">Quero adotar</a>
+    </div>
+</div>
+{% endfor %} -->
 
     {% block content %} {% endblock %}
   </body>
