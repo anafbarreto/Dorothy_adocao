@@ -5,12 +5,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
     <link rel="stylesheet" href="{% static 'css/search.css' %}" />
   </head>
   <body>
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
     <div class="search-container">
       <input type="text" id="search-input" placeholder="Pesquisar..." />
       <button id="search-button"></button>
     </div>
+
+    {% block content %} {% endblock %}
   </body>
 </html>
