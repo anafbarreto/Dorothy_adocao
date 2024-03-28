@@ -4,6 +4,7 @@ class cadastro_animais(models.Model):
     id = models.CharField(max_length=10, primary_key=True) #Vinculado ao chip do animal
     nome = models.CharField(max_length=50) 
     idade = models.IntegerField()
+    image_url = models.URLField()
     especie_choices = [
         ('cachorro', 'Cachorro'),
         ('gato', 'Gato'),
@@ -13,7 +14,7 @@ class cadastro_animais(models.Model):
     porte = models.CharField(max_length=10)
     sexo_choices = [
         ('macho', 'Macho'),
-        ('femea', 'Fêmea'),
+        ('femea', 'Femea'),
     ]
     sexo = models.CharField(max_length=10, choices=sexo_choices)
     castrado = models.BooleanField(default=False)
@@ -23,7 +24,7 @@ class cadastro_animais(models.Model):
     data = models.DateTimeField(auto_now_add=True) 
     
     def __str__(self): #Metodo para mostrar detalhes do cadastro dentro do admin
-        return f'{self.nome}, {self.raca}, {self.especie}, {self.adotado}'
+        return f'{self.nome}, {self.raca}, {self.especie}, {self.adotado},{self.image_url}'
     
     class Meta: # Alterando o nome das bases dentro do admin
         verbose_name = 'Cadastro de animais' # Nome do formulario'
