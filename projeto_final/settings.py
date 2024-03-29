@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'page',
     'cadastro_animal',
     'rest_framework',
+    'pillow',
 ]
 
 MIDDLEWARE = [

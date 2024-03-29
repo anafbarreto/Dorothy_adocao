@@ -36,7 +36,7 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 #### O que foi feito:
 
 1. Maria Carolina criou barra de pesquisa
-2.
+2.  Maria Carolina adicionou card de teste 
 
 ### Criar pagina com o detalhamento dos animais:
 
@@ -62,7 +62,7 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 
 #### O que foi feito:
 
-1.
+1. Criação da aplicação de cadastro do animal e upload de imagem.
 2.
 
 ### Criar sistema de admin:
