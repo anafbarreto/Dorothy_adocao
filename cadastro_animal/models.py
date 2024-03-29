@@ -6,7 +6,7 @@ class Animal(models.Model):
     
     id = models.CharField(max_length=10, primary_key=True) 
     nome = models.CharField(max_length=50) 
-    idade = models.IntegerField()
+    idade = models.CharField(max_length=20)
     foto = models.ImageField()
     
     

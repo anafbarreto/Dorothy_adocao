@@ -1,3 +1,4 @@
+import uuid
 from django.shortcuts import render
 from cadastro_animal.models import Animal
 from cadastro_animal.forms import AnimalForm
@@ -9,7 +10,8 @@ def criar_animal(request):
         form = AnimalForm(request.POST, request.FILES)
         if form.is_valid():
             animal = form.save(commit=False)
-            # Aqui você pode fazer qualquer manipulação adicional do objeto animal, se necessário
+             # Gerar UUID automaticamente
+            animal.id = uuid.uuid4()
             animal.save()
             form = AnimalForm()  # Limpar o formulário após salvar
     else:
