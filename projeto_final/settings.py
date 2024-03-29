@@ -42,8 +42,7 @@ INSTALLED_APPS = [
     'banco',
     'page',
     'cadastro_animal',
-    'rest_framework',
-    'pillow',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -128,10 +127,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Defina o URL base para os arquivos estáticos
 STATIC_URL = '/static/'
 
-# Adicione o caminho para o diretório onde seus arquivos estáticos estão localizados
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
 MEDIA_URL = '/media/'
