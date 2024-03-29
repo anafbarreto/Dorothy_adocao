@@ -31,3 +31,6 @@ terminal: python manage.py startapp nome_da_pasta
 
 #### Executar o server
 terminal: python manage.py runserver
+
+#### 
+ pip install django djangorestframework

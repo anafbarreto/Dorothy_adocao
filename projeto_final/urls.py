@@ -15,10 +15,24 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
+from django.conf import settings
+from django.conf.urls.static import static
+from rest_framework import routers
 from page.views import home
+from cadastro_animal.views import criar_animal, AnimalViewSet
+
+
+router = routers.DefaultRouter()
+router.register('cadastro', AnimalViewSet)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home)
-]
+    path('home/', home),
+    path('cadastroAnimal/',criar_animal),
+    path('',include(router.urls)),
+    ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+  
+
+
