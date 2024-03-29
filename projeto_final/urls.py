@@ -19,7 +19,7 @@ from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import routers
-from page.views import home
+from cadastro_animal.views import home
 from cadastro_animal.views import criar_animal, AnimalViewSet
 
 
@@ -29,7 +29,7 @@ router.register('cadastro', AnimalViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', home),
+    path('listAnimal/', home),
     path('cadastroAnimal/',criar_animal),
     path('',include(router.urls)),
     ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

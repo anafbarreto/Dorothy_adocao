@@ -1,17 +1,28 @@
 @import "var.css";
 
+.title{
+  color:red;
+}
 .container-cards {
   display: flex;
   width: 80%;
   margin: 0 auto;
   margin-top: 2rem;
   justify-content: center;
+  flex-wrap: wrap;
+}
+.card{
+  text-align: center;
 }
 .card-title {
   font-family: var(--font-Radley);
 }
 .card-text {
   font-family: var(--font-Noto);
+}
+.card-img-top{
+  max-height: 50%;
+  margin-bottom: 10px;
 }
 .custom-btn {
   background-color: var(--color-yellow);
@@ -20,6 +31,7 @@
   font-weight: 400;
   font-style: normal;
   font-size: 24px;
+  margin-top: 50px;
 }
 
 .custom-btn:hover {

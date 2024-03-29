@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'css/search.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Radley:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="search-container">
+      <input type="search" id="search-input" placeholder="Pesquisar..." />
+      <button id="search-button"></button>
+    </div>
+    <h5 class="title">Animais Disponíveis</h5>
+    <section class="container-cards">
+      {% for animal in list_animals %}
+      <div class="card" style="width: 18rem; height: 35rem">
+        <div class="card-body">
+          <img
+            src="{{ animal.foto.url}}"
+            alt="{{ animal.nome }}"
+            class="card-img-top"
+            width="500px"
+            height="500px"
+          />
+          <h5 class="card-title">{{ animal.nome }}</h5>
+          <p class="card-text">Idade: {{ animal.idade}}</p>
+
+          <a href="#" class="btn custom-btn">Quero adotar</a>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+    {% block content %} {% endblock %}
+  </body>
+</html>

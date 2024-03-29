@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap5',
     'banco',
-    'page',
     'cadastro_animal',
     'rest_framework'
 ]
