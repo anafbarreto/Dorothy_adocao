@@ -10,7 +10,6 @@ def criar_animal(request):
         form = AnimalForm(request.POST, request.FILES)
         if form.is_valid():
             animal = form.save(commit=False)
-             # Gerar UUID automaticamente
             animal.id = uuid.uuid4()
             animal.save()
             form = AnimalForm()  # Limpar o formulário após salvar
@@ -21,4 +20,4 @@ def criar_animal(request):
 class AnimalViewSet(viewsets.ModelViewSet):
     queryset = Animal.objects.all()
     serializer_class = AnimalSerializer
-# Create your views here.
+# Create your views here

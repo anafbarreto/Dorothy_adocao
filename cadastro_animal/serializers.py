@@ -2,7 +2,7 @@ from rest_framework import serializers
 from cadastro_animal.models import Animal
 import uuid
 class AnimalSerializer(serializers.ModelSerializer):
-
+    # id = serializers.UUIDField()
     class Meta:
         model = Animal
         fields = ['nome','idade', 'foto']
@@ -10,7 +10,7 @@ class AnimalSerializer(serializers.ModelSerializer):
      # Sobrescreva o método create para definir o ID automaticamente
     def create(self, validated_data):
         
-        # Definir o novo ID no validated_data usando unicode
+        # # Definir o novo ID no validated_data usando unicode
         validated_data['id'] = str(uuid.uuid4())
         
         # Chamar o método create da superclasse para criar o objeto
