@@ -1,0 +1,68 @@
+{% comment %} <!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Animal</title>
+    <!-- Inclua os links para os arquivos Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Inclua seu arquivo de estilo CSS personalizado (se houver) -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Detalhes do Animal</h1>
+        <p><strong>Nome:</strong> {{ animal.nome }}</p>
+        <p><strong>Idade:</strong> {{ animal.idade }}</p>
+        <p><strong>Espécie:</strong> {{ animal.get_especie_display }}</p>
+        <p><strong>Raça:</strong> {{ animal.raca }}</p>
+        <h1>Historico de Saúde</h1>
+        <p><strong>Castrado:</strong> {{ animal.nome }}</p>
+        <p><strong>Vacinado:</strong> {{ animal.idade }}</p>
+        <p><strong>Doença pré-existente:</strong> {{ animal.get_especie_display }}</p>
+        <p><strong>Raça:</strong> {{ animal.raca }}</p>
+        <!-- Adicione outros campos do modelo aqui -->
+    </div>
+</body>
+</html> {% endcomment %}
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Animal</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        /* Estilos personalizados */
+        .animal-image {
+            float: left;
+            margin-right: 20px; /* Adicione margem à direita para separar a imagem das informações */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Detalhes do Animal</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{{ animal.imagem.url }}" alt="Imagem do animal" class="animal-image">
+            </div>
+            <div class="col-md-8">
+                <p><strong>Nome:</strong> {{ animal.nome }}</p>
+                <p><strong>Idade:</strong> {{ animal.idade }}</p>
+                <p><strong>Espécie:</strong> {{ animal.get_especie_display }}</p>
+                <p><strong>Raça:</strong> {{ animal.raca }}</p>
+                <h1>Historico de Saúde</h1>
+                <p><strong>Castrado:</strong> {{ animal.nome }}</p>
+                <p><strong>Vacinado:</strong> {{ animal.idade }}</p>
+                <p><strong>Doença pré-existente:</strong> {{ animal.get_especie_display }}</p>
+                <p><strong>Raça:</strong> {{ animal.raca }}</p>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
