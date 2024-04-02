@@ -26,5 +26,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('detalhes_animal/<int:animal_id>/', detalhes_animal, name='detalhes_animal')
 ]
+
+from page.views import home
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', home)
+]
 #    path('detalhes_animal/<int:animal_id>/', detalhes_animal, name='detalhes_animal'),  /* teste com uma imagem - - - apagar
 #    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
