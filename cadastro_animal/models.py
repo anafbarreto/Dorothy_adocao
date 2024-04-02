@@ -1,11 +1,11 @@
 from django.db import models
 from datetime import datetime
+import uuid
 
 # Create your models here.
 
 class Animal(models.Model):
-    
-    id = models.CharField(max_length=10, primary_key=True) 
+    id = models.CharField(max_length=10, primary_key=True ,editable=False) 
     nome = models.CharField(max_length=50) 
     idade = models.CharField(max_length=20)
     foto = models.ImageField()
@@ -30,7 +30,7 @@ class Animal(models.Model):
     data = models.DateTimeField(default=datetime.now)
     
     def __str__(self): #Metodo para mostrar detalhes do cadastro dentro do admin
-        return f'{self.nome},  {self.foto}'
+        return f'{self.nome},  {self.foto}, {self.id}'
     
     class Meta: # Alterando o nome das bases dentro do admin
         verbose_name = 'Cadastro de animais' # Nome do formulario'

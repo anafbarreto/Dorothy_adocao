@@ -2,7 +2,6 @@ from rest_framework import serializers
 from cadastro_animal.models import Animal
 import uuid
 class AnimalSerializer(serializers.ModelSerializer):
-    # id = serializers.UUIDField()
     class Meta:
         model = Animal
         fields = ['nome','idade', 'foto']
