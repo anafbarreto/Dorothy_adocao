@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 from rest_framework import routers
 from cadastro_animal.views import home
 from cadastro_animal.views import criar_animal, AnimalViewSet
-
+from cadastro_animal.views import pesquisa_animal
 
 router = routers.DefaultRouter()
 router.register('cadastro', AnimalViewSet)
@@ -29,8 +29,9 @@ router.register('cadastro', AnimalViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('listAnimal/', home),
-    path('cadastroAnimal/',criar_animal),
+    path('home/', home),
+     path('pesquisa/', pesquisa_animal, name='pesquisa_animal'),
+    path('cadastrarAnimal/',criar_animal),
     path('',include(router.urls)),
     ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
   

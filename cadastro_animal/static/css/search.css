@@ -9,12 +9,12 @@
   border-radius: 4px;
 }
 
-
 #search-input {
   flex: 1;
   padding: 8px;
   font-size: 16px;
   border: none;
+  background-color: red;
 }
 
 #search-button {
@@ -31,4 +31,8 @@
 }
 input:focus {
   outline: none;
+}
+
+.error-message {
+  background-color: blue;
 }

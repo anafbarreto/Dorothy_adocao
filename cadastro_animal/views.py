@@ -13,6 +13,17 @@ def home(request):
   
     return render(request, 'home.html',{'list_animals':list_animals});
 
+def pesquisa_animal(request):
+    query = request.GET.get('q')
+    list_animals = Animal.objects.filter(nome__icontains=query) if query else Animal.objects.filter(adotado=False)
+    mensagem = None
+
+    if query and not list_animals:
+        mensagem = f"Animal com o nome '{query}' não encontrado."
+
+    return render(request, 'home.html', {'list_animals': list_animals, 'mensagem': mensagem})
+
+
 def criar_animal(request):
     if request.method == 'POST':
         form = AnimalForm(request.POST, request.FILES)
