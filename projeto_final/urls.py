@@ -16,9 +16,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from detalhesanimal.views import detalhes_animal
+from django.conf.urls.static import static
+from django.conf import settings
+from detalhesanimal.views import detalhes_animal
+from django.views.generic.base import RedirectView
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('detalhes_animal/<int:animal_id>/', detalhes_animal, name='detalhes_animal')
+]
+
 from page.views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home)
 ]
+#    path('detalhes_animal/<int:animal_id>/', detalhes_animal, name='detalhes_animal'),  /* teste com uma imagem - - - apagar
+#    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
