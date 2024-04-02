@@ -24,6 +24,7 @@ from django.views.generic.base import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('detalhes_animal/', detalhes_animal, name='detalhes_animal')
+    path('detalhes_animal/<int:animal_id>/', detalhes_animal, name='detalhes_animal')
+]
 #    path('detalhes_animal/<int:animal_id>/', detalhes_animal, name='detalhes_animal'),  /* teste com uma imagem - - - apagar
 #    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
