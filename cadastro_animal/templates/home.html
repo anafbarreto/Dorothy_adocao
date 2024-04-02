@@ -17,7 +17,7 @@
   </head>
   <body>
     {% if mensagem %}
-    <p class="error-message">{{ mensagem }}</p>
+    <p class="alert alert-primary alert-dismissible fade show   m-5" >{{ mensagem }}</p>
     {% endif %}
     <div class="search-container">
       <form action="{% url 'pesquisa_animal' %}" method="GET">
@@ -25,7 +25,7 @@
           type="search"
           id="search-input"
           name="q"
-          placeholder="Pesquisar..."
+          placeholder="{% if query %}{{ query }}{% else %}Pesquisar por palavras chave raça, especie ...{% endif %}"
         />
         <button type="submit" id="search-button"></button>
       </form>
@@ -45,6 +45,7 @@
           />
           <h5 class="card-title">{{ animal.nome }}</h5>
           <p class="card-text">Idade: {{ animal.idade}}</p>
+          <p class="card-text">Raça: {{ animal.raca}}</p>
 
           <a href="#" class="btn custom-btn">Quero adotar</a>
         </div>

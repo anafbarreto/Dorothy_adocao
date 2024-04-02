@@ -1,7 +1,10 @@
 @import "var.css";
 
 .title{
-  color:red;
+  font-family: var(--font-Radley);
+  font-size:40px;
+  text-align: center;
+  margin-top:2rem;
 }
 .container-cards {
   display: flex;
@@ -13,6 +16,8 @@
 }
 .card{
   text-align: center;
+  margin-left: 2rem;
+  margin-top: 2rem;
 }
 .card-title {
   font-family: var(--font-Radley);
@@ -23,6 +28,7 @@
 .card-img-top{
   max-height: 50%;
   margin-bottom: 10px;
+  object-fit: contain;
 }
 .custom-btn {
   background-color: var(--color-yellow);
@@ -31,7 +37,7 @@
   font-weight: 400;
   font-style: normal;
   font-size: 24px;
-  margin-top: 50px;
+  margin-top: 5px;
 }
 
 .custom-btn:hover {

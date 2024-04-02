@@ -4,7 +4,7 @@ from cadastro_animal.models import Animal
 from cadastro_animal.forms import AnimalForm
 from rest_framework import viewsets
 from cadastro_animal.serializers import AnimalSerializer
-
+from django.db.models import Q
 # Create your views here.
 
 def home(request):
@@ -13,16 +13,23 @@ def home(request):
   
     return render(request, 'home.html',{'list_animals':list_animals});
 
+
+
 def pesquisa_animal(request):
     query = request.GET.get('q')
-    list_animals = Animal.objects.filter(nome__icontains=query) if query else Animal.objects.filter(adotado=False)
+    list_animals = Animal.objects.filter(
+        Q(nome__icontains=query) | 
+        Q(especie__icontains=query) |
+        Q(raca__icontains=query)|
+        Q(porte__icontains=query)|
+        Q(sexo__icontains=query)
+    ) if query else Animal.objects.filter(adotado=False)
     mensagem = None
 
     if query and not list_animals:
-        mensagem = f"Animal com o nome '{query}' não encontrado."
+        mensagem = f"Parametro de busca '{query}' inválido."
 
-    return render(request, 'home.html', {'list_animals': list_animals, 'mensagem': mensagem})
-
+    return render(request, 'home.html', {'list_animals': list_animals, 'mensagem': mensagem, 'query': query})
 
 def criar_animal(request):
     if request.method == 'POST':
@@ -36,7 +43,9 @@ def criar_animal(request):
         form = AnimalForm()
     return render(request, 'cadastro.html', {'form': form})
 
+#! O AnimalSerializer é uma classe que converte objetos Animal em formatos como JSON para serem enviados pela API e vice-versa.
 class AnimalViewSet(viewsets.ModelViewSet):
     queryset = Animal.objects.all()
     serializer_class = AnimalSerializer
-# Create your views here
+    
+# Com essa configuração,voce consegue fazer as operações CRUD padrão para o modelo Animal . Isso inclui criar, recuperar, atualizar e excluir objetos Animal através da API REST.
