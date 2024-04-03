@@ -1,3 +1,4 @@
+import cadastro_animal.views
 import uuid
 from django.shortcuts import render
 from cadastro_animal.models import Animal
@@ -22,7 +23,7 @@ def pesquisa_animal(request):
         Q(especie__icontains=query) |
         Q(raca__icontains=query)|
         Q(porte__icontains=query)|
-        Q(idade__icontains=query)|
+         Q(idade__icontains=query)|
         Q(sexo__icontains=query)
        
     ) if query else Animal.objects.filter(adotado=False)
@@ -34,16 +35,21 @@ def pesquisa_animal(request):
     return render(request, 'home.html', {'list_animals': list_animals, 'mensagem': mensagem, 'query': query})
 
 def criar_animal(request):
+    sucess = False  # Inicialmente, definimos sucesso como falso
     if request.method == 'POST':
         form = AnimalForm(request.POST, request.FILES)
         if form.is_valid():
             animal = form.save(commit=False)
             animal.id = uuid.uuid4()
             animal.save()
-            form = AnimalForm()  # Limpar o formulário após salvar
+            sucess = True  # Definimos sucesso como verdadeiro após salvar com sucesso
+
+            # Limpar o formulário após salvar
+            form = AnimalForm()
     else:
         form = AnimalForm()
-    return render(request, 'cadastro.html', {'form': form})
+    
+    return render(request, 'cadastro.html', {'form': form, 'sucess': sucess})
 
 #! O AnimalSerializer é uma classe que converte objetos Animal em formatos como JSON para serem enviados pela API e vice-versa.
 class AnimalViewSet(viewsets.ModelViewSet):

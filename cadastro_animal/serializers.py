@@ -3,8 +3,8 @@ from cadastro_animal.models import Animal
 import uuid
 class AnimalSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Animal
-        fields = ['nome','idade', 'foto']
+       model = Animal
+       exclude = ['id', 'adotado', 'data']
         
      # Sobrescreva o método create para definir o ID automaticamente
     def create(self, validated_data):

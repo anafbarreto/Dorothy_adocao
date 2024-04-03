@@ -1,5 +1,29 @@
-<form method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Salvar</button>
-</form>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro Animal</title>
+    <link rel="stylesheet" href="{% static 'css/registerAnimal.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/var.css' %}" />
+    {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
+  </head>
+  <body>
+    {% if sucess %}
+    <p class="alert alert-success">Cadastro realizado com sucesso</p>
+    <form method="POST" enctype="multipart/form-data" class="container-box">
+      {% csrf_token %}
+      <div class="form">{{ form.as_p }}</div>
+      <button type="submit" class="btn btn-warning">Salvar</button>
+    </form>
+    {% else %}
+
+    <form method="POST" enctype="multipart/form-data" class="container-box">
+      {% csrf_token %}
+      <div class="form">{{ form.as_p }}</div>
+      <button type="submit" class="btn btn-warning">Salvar</button>
+    </form>
+    {% endif%}
+  </body>
+</html>
