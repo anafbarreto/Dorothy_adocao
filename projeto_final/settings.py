@@ -37,12 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-   'django.contrib.staticfiles',
+    'django.contrib.staticfiles',
     'bootstrap5',
     'banco',
-    'detalhesanimal',
-    'page',
-
+    'cadastro_animal',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -130,7 +129,10 @@ STATIC_URL = '/static/'
 # Adicione o caminho para o diretório onde seus arquivos estáticos estão localizados
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
- ]
+]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

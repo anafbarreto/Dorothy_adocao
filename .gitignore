@@ -1,6 +1,6 @@
 .venv
 _venv_
-_pycahe_
+__pycache__/
 Lib/
 Scripts/
 pyvenv.cfg

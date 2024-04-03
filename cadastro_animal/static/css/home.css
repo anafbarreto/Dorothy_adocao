@@ -1,0 +1,80 @@
+@import "var.css";
+.header {
+  background: rgba(21, 66, 132, 1);
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  font-family: "Sigmar One";
+  font-size: 16px;
+  color: white;
+}
+
+.header a {
+  background: rgba(248, 197, 17, 1);
+  border-radius: 10px;
+  padding: 10px 30px;
+  margin: 0 30px;
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto";
+  font-size: 16px;
+  text-align: center;
+}
+.title {
+  font-family: var(--font-Radley);
+  font-size: 40px;
+  text-align: center;
+  margin-top: 2rem;
+}
+.container-cards {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card {
+  text-align: center;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+.card-title {
+  font-family: var(--font-Radley);
+}
+.card-text {
+  font-family: var(--font-Noto);
+}
+.card-img-top {
+  max-height: 50%;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+.custom-btn {
+  background-color: var(--color-yellow);
+  color: var(--color-white);
+  font-family: var(--font-Radley);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  margin-top: 5px;
+}
+
+.custom-btn:hover {
+  color: var(--color-white);
+  padding: 10px;
+  transition: 0.8s;
+}
+.custom-btn:focus {
+  /* Muda a cor da sombra quando o botão recebe foco */
+  box-shadow: 0 0 10px rgba(3, 6, 158, 0.5);
+}
+
+.icon-gender {
+  margin-left: 50px;
+  height: 24px;
+}

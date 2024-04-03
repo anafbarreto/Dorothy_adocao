@@ -15,23 +15,28 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from detalhesanimal.views import detalhes_animal
-from django.conf.urls.static import static
+from django.urls import path,include
 from django.conf import settings
+from django.conf.urls.static import static
+from rest_framework import routers
+from cadastro_animal.views import home
+from cadastro_animal.views import criar_animal, AnimalViewSet
+from cadastro_animal.views import pesquisa_animal
 from detalhesanimal.views import detalhes_animal
 from django.views.generic.base import RedirectView
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('detalhes_animal/<int:animal_id>/', detalhes_animal, name='detalhes_animal')
-]
+router = routers.DefaultRouter()
+router.register('cadastro', AnimalViewSet)
 
-from page.views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home)
-]
-#    path('detalhes_animal/<int:animal_id>/', detalhes_animal, name='detalhes_animal'),  /* teste com uma imagem - - - apagar
-#    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('home/', home),
+    path('pesquisa/', pesquisa_animal, name='pesquisa_animal'),
+    path('cadastrarAnimal/',criar_animal),
+    path('detalhes_animal/<int:animal_id>/', detalhes_animal, name='detalhes_animal'),
+    path('',include(router.urls)),
+    ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+  
+
+
