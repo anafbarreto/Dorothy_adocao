@@ -6,23 +6,40 @@ header {
   box-sizing: border-box;
   margin: 0;
   display: flex;
-  justify-content: center;
-  text-align: left;
+  align-items: center;
   font-family: "Sigmar One";
-  font-size: 16px;
-  color: white;
+  font-size: 24px;
+  color: var(--color-white);
 }
 
-header a {
+.adocao {
+  padding: 0 5px;
+  color: rgba(248, 197, 17, 1);
+}
+
+.pag_link {
   background: rgba(248, 197, 17, 1);
   border-radius: 10px;
   padding: 10px 30px;
-  margin: 0 30px;
+  margin: 0 15px;
   text-decoration: none;
   color: white;
   font-family: "Roboto";
   font-size: 16px;
   text-align: center;
+}
+
+.pag_link:hover {
+  opacity: 0.8;
+}
+
+.pag_link:focus {
+  outline: none;
+  background-color: rgb(255, 224, 114);
+}
+
+.login_link {
+  margin-left: auto;
 }
 .title {
   font-family: var(--font-Radley);
@@ -77,4 +94,22 @@ header a {
 .icon-gender {
   margin-left: 50px;
   height: 24px;
+}
+
+footer{
+  background: rgba(21, 66, 132, 1);
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 14px;
+  color: white;
+}
+
+.github_icon{
+  margin: 0px 10px;
 }

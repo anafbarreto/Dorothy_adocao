@@ -26,16 +26,12 @@
     />
   </head>
   <body>
-    <header>
-      Dorothy Adoção
-      <a href="/home" title="Página inicial" class="home_link">Home</a>
-      <a href="/cadastrarAnimal" title="Cadastramento" class="cadastro_pet_link"
-        >Cadastrar Pet</a
-      >
-      <a href="#parceiros" title="Parcerias" class="parceiros_link"
-        >Seja nosso parceiro</a
-      >
-      <a href="#login" title="Login" class="login_link">Entrar</a>
+    <header class="header">
+      <span class="dorothy">Dorothy</span> <span class="adocao">Adoção</span>
+      <a href=/home title="Página inicial" class="pag_link">Home</a>
+      <a href=/cadastrarAnimal title="Cadastramento" class="pag_link">Cadastrar Pet</a>
+      <a href=#parceiros title="Parcerias" class="pag_link">Seja nosso parceiro</a>
+      <a href=#login title="Login" class="pag_link login_link">Entrar</a>
     </header>
     {% if mensagem %}
     <p class="alert alert-primary alert-dismissible fade show m-5">
@@ -78,17 +74,8 @@
     {% block content %} {% endblock %}
     <footer>
       Desenvolvido por Squad Dorothy Vaughan
-      <a
-        href="https://github.com/anafbarreto/Abrigo_animais"
-        title="Página do projeto no github"
-        class="github_link"
-      >
-        <img
-          src="{% static 'icon/github.svg' %}"
-          class="github_icon"
-          alt="Ícone GitHub"
-          width="30px"
-        />
+      <a href="https://github.com/anafbarreto/Abrigo_animais" title="Página do projeto no github" class="github_link">
+        <img src="{% static 'icon/github.png' %}" class="github_icon" alt="Ícone GitHub">
       </a>
     </footer>
   </body>
