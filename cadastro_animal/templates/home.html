@@ -53,7 +53,7 @@
 
     <section class="container-cards">
       {% for animal in list_animals %}
-      <div class="card" style="width: 18rem; height: 35rem">
+      <div class="card" style="width: 18rem; height: 40rem">
         <div class="card-body">
           <img
             src="{{ animal.foto.url}}"
@@ -62,7 +62,14 @@
             width="500px"
             height="500px"
           />
-          <h5 class="card-title">{{ animal.nome }}</h5>
+
+            <h5 class="card-title">{{ animal.nome }}</h5>
+            {% if animal.sexo == 'femea' %}
+              <img src="{% static 'icon/icon-female.png' %}" class="icon-gender">
+            {% else %}
+              <img src="{% static 'icon/icon-masc.png' %}" class="icon-gender">
+            {% endif %}
+    
           <p class="card-text">Idade: {{ animal.idade}}</p>
           <p class="card-text">Raça: {{ animal.raca}}</p>
 

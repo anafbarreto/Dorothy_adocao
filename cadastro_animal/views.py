@@ -43,7 +43,6 @@ def criar_animal(request):
             animal.id = uuid.uuid4()
             animal.save()
             sucess = True  # Definimos sucesso como verdadeiro após salvar com sucesso
-
             # Limpar o formulário após salvar
             form = AnimalForm()
     else:
