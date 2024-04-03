@@ -1,3 +1,6 @@
 .venv
 _venv_
 _pycahe_
+Lib/
+Scripts/
+pyvenv.cfg
