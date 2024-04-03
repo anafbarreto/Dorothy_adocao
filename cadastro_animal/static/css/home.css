@@ -1,5 +1,5 @@
 @import "var.css";
-.header {
+header {
   background: rgba(21, 66, 132, 1);
   width: 100%;
   padding: 20px;
@@ -13,7 +13,7 @@
   color: white;
 }
 
-.header a {
+header a {
   background: rgba(248, 197, 17, 1);
   border-radius: 10px;
   padding: 10px 30px;

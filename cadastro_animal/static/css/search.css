@@ -3,14 +3,8 @@
 .search-container {
   display: flex;
   align-items: center;
-<<<<<<< HEAD:cadastro_animal/static/css/search.css
-  width: 35em;
-  margin: 0 auto;
-  margin-top: 20px;
-=======
   width: 100%; /* Definindo a largura para 100% */
   max-width: 35em; /* Limitando a largura máxima para 35em */
->>>>>>> 27ec4d720950f8064995c7e373378973f0754acd:page/static/css/search.css
   border: 1px solid #ccc;
   border-radius: 4px;
   margin: 10px auto;
@@ -24,6 +18,7 @@
   font-family: "Roboto";
   border: none;
   width: 35vw;
+  margin-left: 10px;
 }
 
 #search-button {
@@ -32,13 +27,8 @@
   background-position: center;
   background-repeat: no-repeat;
   border: none;
-<<<<<<< HEAD:cadastro_animal/static/css/search.css
   padding: 15px;
   margin: 10px 5px 10px 5px;
-=======
-  padding: 12px;
-  margin: 8px 5px;
->>>>>>> 27ec4d720950f8064995c7e373378973f0754acd:page/static/css/search.css
   cursor: pointer;
   border-radius: 0 4px 4px 0;
   background-color: transparent;
@@ -48,14 +38,6 @@ input:focus {
   outline: none;
 }
 
-<<<<<<< HEAD:cadastro_animal/static/css/search.css
-.alert {
-  position: relative;
-  top: 15rem;
-  width: 30vw;
-  left:25rem;
-}
-=======
 /* Estilos para telas menores (mobile) */
 @media screen and (max-width: 768px) {
   .search-container {
@@ -73,4 +55,3 @@ input:focus {
     margin: 5px; /* Ajustando a margem do botão para telas menores */
   }
 }
->>>>>>> 27ec4d720950f8064995c7e373378973f0754acd:page/static/css/search.css
