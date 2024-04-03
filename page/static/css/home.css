@@ -1,3 +1,4 @@
+/* Estilos para telas maiores (desktop) */
 .header {
     background: rgba(21, 66, 132, 1);
     width: 100%;
@@ -5,21 +6,72 @@
     box-sizing: border-box;
     margin: 0;
     display: flex;
-    justify-content: center;
-    text-align: left;
+    align-items: center; /* Alinha itens verticalmente ao centro */
     font-family: "Sigmar One";
-    font-size: 16px;
+    font-size: 24px;
     color: white;
 }
 
-.header a {
+.adocao {
+    padding: 0 5px;
+    color: rgba(248, 197, 17, 1);
+}
+
+.pag_link {
     background: rgba(248, 197, 17, 1);
     border-radius: 10px;
     padding: 10px 30px; 
-    margin: 0 30px; 
+    margin: 0 15px; 
     text-decoration: none; 
     color: white; 
     font-family: "Roboto";
     font-size: 16px;  
     text-align: center;
+}
+
+.pag_link:hover{
+    opacity: 0.8;
+}
+
+.pag_link:focus{
+    outline: none;
+    background-color:rgb(255, 224, 114);
+}
+
+.login_link {
+    margin-left: auto;
+}
+
+/* Estilos para telas menores (mobile) */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Altera a direção do flex para coluna */
+        text-align: center;
+    }
+
+    .login_link {
+        margin: 10px 0 0 auto; /* Move o link "Entrar" para o canto superior direito */
+    }
+
+    .pag_link {
+        margin: 10px 0; /* Adiciona espaçamento entre os links na versão mobile */
+    }
+}
+
+.footer{
+    background: rgba(21, 66, 132, 1);
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 14px;
+    color: white;
+}
+
+.github_icon{
+    margin: 0px 10px;
 }
