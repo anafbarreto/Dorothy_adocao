@@ -1,0 +1,24 @@
+{% extends "inicio.html" %}
+{% load bootstrap5 %}
+{% block principal %}
+
+  <h1 class="text-body-emphasis">Formulário de Adoção de Animais</h1>
+
+  <form action="" method="POST" id="form" novalidate>
+    {% csrf_token %}
+    {% bootstrap_form form %}
+
+    {% if form.errors %}
+      <div class="alert alert-danger">
+        {% for field, error_list in form.errors.items %}
+          {% for error in error_list %}
+            {{ error }}
+          {% endfor %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+  </form>
+
+{% endblock %}

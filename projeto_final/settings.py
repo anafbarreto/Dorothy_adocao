@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap5',
     'banco',
+    'gestao_adocao',
 ]
 
 MIDDLEWARE = [
