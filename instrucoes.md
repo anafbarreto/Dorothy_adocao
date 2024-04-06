@@ -38,9 +38,6 @@ terminal: django-admin startproject projeto_nome . (não esquecer do ponto, ele 
 
 terminal: python manage.py startapp nome_da_pasta
 
-#### Executar o server
-
-terminal: python manage.py runserver
 
 #### Install Rest Api
 
@@ -52,3 +49,6 @@ terminal: python manage.py runserver
 ```pip install pillow
 
 ```
+#### Executar o server
+
+terminal: python manage.py runserver

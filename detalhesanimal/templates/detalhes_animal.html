@@ -22,30 +22,62 @@
     </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Dorothy Adoção</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cadastrar Pet</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Seja nosso parceiro</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Entrar</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container">
         <h1 class="mt-5 mb-5">Detalhes do Animal</h1>
         <div class="row">
             <div class="col-md-4">
                 <img src="{{ animal.imagem.url }}" alt="Imagem do animal" class="animal-image">
-                <!--<img src="https://lh6.googleusercontent.com/proxy/92n64YoxSRm-cM-noW7FmPM-91Pt3DM4oWrB1lwdj2C4VCTUEuQQ2x6t4OmDotLtHRZCFaSIumtsg59fTsSayNu5bAVZLOsSu0VGN5Jxn-eMSajCJTH6YYK1KST_c-U" alt="dog">-->
             </div>
             <div class="col-md-8">
-
                 <p class="mb-1">Nome: {{ animal.nome }}</p>
                 <p class="mb-1">Idade: {{ animal.idade }}</p>
                 <p class="mb-1">Espécie: {{ animal.get_especie_display }}</p>
                 <p class="mb-1">Raça: {{ animal.raca }}</p>
                 <p class="mb-1">Sexo: {{ animal.sexo }}</p>
-                <p class="mt-3 fw-bold">Historico de Saúde</p>
+                <p class="mt-3 fw-bold">Histórico de Saúde</p>
                 <ul class="list">
                     <li class="list">Castrado:</li>
                     <li class="list">Vacinado:</li>
                     <li class="list">Doença pré-existente:</li>
                 </ul>
-                
                 <a href="" class="btn btn-warning text-light">Deseja continuar com a adoção</a>
             </div>
         </div>
     </div>
+
+    <footer class="bg-primary text-light text-center p-3 mt-5">
+        Desenvolvido por Squad Dorothy Vaughan
+        <a href="https://github.com/anafbarreto/Abrigo_animais" title="Página do projeto no github" class="github_link">
+            <img src="{% static 'icon/github.png' %}" class="github_icon" alt="Ícone GitHub">
+        </a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

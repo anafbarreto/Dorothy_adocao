@@ -29,18 +29,12 @@
         <a href="/login" title="Login" class="pag_link login_link">Entrar</a>
     </header>
 
-    <section>
-        <h1>Cadastro Animal</h1>
-        {% if sucess %}
-            <p class="alert alert-success">Cadastro realizado com sucesso</p>
-        {% endif %}
-        <form method="POST" enctype="multipart/form-data" class="container-box">
-            {% csrf_token %}
-            <div class="form">{{ form.as_p }}</div>
-            <button type="submit" class="btn btn-warning">Salvar</button>
-        </form>
-    </section>
-
+    <h1>Editar Animal</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar Alterações</button>
+    </form>
     <footer>
         Desenvolvido por Squad Dorothy Vaughan
         <a href="https://github.com/anafbarreto/Abrigo_animais" title="Página do projeto no github" class="github_link">
