@@ -1,64 +1,66 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .login-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            max-width: 100%;
-        }
-        .login-container h2 {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .login-form input[type="text"],
-        .login-form input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-        .login-form button {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .login-form button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Squad Dorothy Vaughan">
+  <meta name="description" content="Abrigo de animais - desafio final">
+  <title>Home</title>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  <link rel="stylesheet" href="{% static 'css/search.css' %}">
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Radley:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sigmar+One&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      position: relative;
+    }
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #144484; /* Azul escuro */
+      padding: 10px 0; /* Adicione o preenchimento desejado */
+      text-align: center;
+    }
+    .content {
+      margin-bottom: 60px; /* Ajuste conforme a altura do footer */
+    }
+  </style>
 </head>
 <body>
-    <div class="login-container">
-        <h2>Login</h2>
-        <form class="login-form" method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Login</button>
-        </form>
-    </div>
+<header class="header">
+  <span class="dorothy">Dorothy</span> <span class="adocao">Adoção</span>
+  <a href="/home" title="Página inicial" class="pag_link">Home</a>
+  <a href="/cadastrarAnimal" title="Cadastramento" class="pag_link">Cadastrar Pet</a>
+  <a href="#parceiros" title="Parcerias" class="pag_link">Seja nosso parceiro</a>
+  <a href="#login" title="Login" class="pag_link login_link">Entrar</a>
+</header>
+<div class="login-container content">
+    <h2>Login</h2>
+    {% if form.errors %}
+        <p>Usuário ou senha inválidos. Por favor, tente novamente.</p>
+    {% endif %}
+    <form class="login-form" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+</div>
+<footer class="footer">
+    Desenvolvido por Squad Dorothy Vaughan
+    <a href="https://github.com/anafbarreto/Abrigo_animais" title="Página do projeto no github" class="github_link">
+      <img src="{% static 'icon/github.png' %}" class="github_icon" alt="Ícone GitHub">
+    </a>
+</footer>
 </body>
 </html>

@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path,include
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import routers
@@ -24,7 +24,7 @@ from cadastro_animal.views import criar_animal, AnimalViewSet
 from cadastro_animal.views import pesquisa_animal
 from detalhesanimal.views import detalhes_animal
 from django.views.generic.base import RedirectView
-from detalhesanimal import views
+
 
 router = routers.DefaultRouter()
 router.register('cadastro', AnimalViewSet)
