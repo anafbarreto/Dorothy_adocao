@@ -24,6 +24,7 @@ from cadastro_animal.views import criar_animal, AnimalViewSet
 from cadastro_animal.views import pesquisa_animal
 from detalhesanimal.views import detalhes_animal
 from django.views.generic.base import RedirectView
+from detalhesanimal import views
 
 router = routers.DefaultRouter()
 router.register('cadastro', AnimalViewSet)
@@ -34,7 +35,7 @@ urlpatterns = [
     path('home/', home),
     path('pesquisa/', pesquisa_animal, name='pesquisa_animal'),
     path('cadastrarAnimal/',criar_animal),
-    path('detalhes_animal/<int:animal_id>/', detalhes_animal, name='detalhes_animal'),
+    path('detalhes/<int:animal_id>/', detalhes_animal, name='detalhes_animal'),
     path('',include(router.urls)),
     ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
   

@@ -23,7 +23,7 @@ def pesquisa_animal(request):
         Q(especie__icontains=query) |
         Q(raca__icontains=query)|
         Q(porte__icontains=query)|
-         Q(idade__icontains=query)|
+        Q(idade__icontains=query)|
         Q(sexo__icontains=query)
        
     ) if query else Animal.objects.filter(adotado=False)
