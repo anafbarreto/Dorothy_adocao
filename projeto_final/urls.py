@@ -25,6 +25,7 @@ from cadastro_animal.views import pesquisa_animal
 from detalhesanimal.views import detalhes_animal
 from funcionarios.views import login_view, editar_animal, pagina_apos_login 
 from django.views.generic.base import RedirectView
+import uuid
 
 
 router = routers.DefaultRouter()
@@ -36,10 +37,10 @@ urlpatterns = [
     path('home/', home),
     path('pesquisa/', pesquisa_animal, name='pesquisa_animal'),
     path('cadastrarAnimal/',criar_animal),
-    path('detalhes/<int:animal_id>/', detalhes_animal, name='detalhes_animal'),
+    path('detalhes/<uuid:animal_id>/', detalhes_animal, name='detalhes_animal'),
     path('login/', login_view, name='login'),
     path('pagina_apos_login/', pagina_apos_login, name='pagina_apos_login'),
-    path('editar_animal/<int:animal_id>/', editar_animal, name='editar_animal'),
+    path('editar_animal/<uuid:animal_id>/', editar_animal, name='editar_animal'),
     path('', include(router.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
