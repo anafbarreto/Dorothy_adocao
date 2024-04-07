@@ -6,3 +6,4 @@ Scripts/
 pyvenv.cfg
 vscode
 .env
+.vscode/

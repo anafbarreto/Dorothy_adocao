@@ -176,6 +176,134 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -217,6 +345,30 @@
         "documentation": {}
     },
     {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
         "label": "AppConfig",
         "importPath": "django.apps",
         "description": "django.apps",
@@ -233,6 +385,30 @@
         "documentation": {}
     },
     {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Animal",
+        "importPath": "cadastro_animal.models",
+        "description": "cadastro_animal.models",
+        "isExtraImport": true,
+        "detail": "cadastro_animal.models",
+        "documentation": {}
+    },
+    {
+        "label": "Animal",
+        "importPath": "cadastro_animal.models",
+        "description": "cadastro_animal.models",
+        "isExtraImport": true,
+        "detail": "cadastro_animal.models",
+        "documentation": {}
+    },
+    {
         "label": "Animal",
         "importPath": "cadastro_animal.models",
         "description": "cadastro_animal.models",
@@ -262,6 +438,22 @@
         "description": "cadastro_animal.models",
         "isExtraImport": true,
         "detail": "cadastro_animal.models",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
         "documentation": {}
     },
     {
@@ -290,6 +482,30 @@
     },
     {
         "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
         "isExtraImport": true,
@@ -320,6 +536,14 @@
         "description": "datetime",
         "isExtraImport": true,
         "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
         "documentation": {}
     },
     {
@@ -404,6 +628,14 @@
         "documentation": {}
     },
     {
+        "label": "AnimalForm",
+        "importPath": "cadastro_animal.forms",
+        "description": "cadastro_animal.forms",
+        "isExtraImport": true,
+        "detail": "cadastro_animal.forms",
+        "documentation": {}
+    },
+    {
         "label": "AnimalSerializer",
         "importPath": "cadastro_animal.serializers",
         "description": "cadastro_animal.serializers",
@@ -417,6 +649,46 @@
         "description": "django.db.models",
         "isExtraImport": true,
         "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "cadastro_animais",
+        "importPath": "detalhesanimal.models",
+        "description": "detalhesanimal.models",
+        "isExtraImport": true,
+        "detail": "detalhesanimal.models",
+        "documentation": {}
+    },
+    {
+        "label": "AuthenticationForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "LoginForm",
+        "importPath": "funcionarios.forms",
+        "description": "funcionarios.forms",
+        "isExtraImport": true,
+        "detail": "funcionarios.forms",
         "documentation": {}
     },
     {
@@ -474,6 +746,46 @@
         "description": "django.conf.urls.static",
         "isExtraImport": true,
         "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "detalhes_animal",
+        "importPath": "detalhesanimal.views",
+        "description": "detalhesanimal.views",
+        "isExtraImport": true,
+        "detail": "detalhesanimal.views",
+        "documentation": {}
+    },
+    {
+        "label": "login_view",
+        "importPath": "funcionarios.views",
+        "description": "funcionarios.views",
+        "isExtraImport": true,
+        "detail": "funcionarios.views",
+        "documentation": {}
+    },
+    {
+        "label": "editar_animal",
+        "importPath": "funcionarios.views",
+        "description": "funcionarios.views",
+        "isExtraImport": true,
+        "detail": "funcionarios.views",
+        "documentation": {}
+    },
+    {
+        "label": "pagina_apos_login",
+        "importPath": "funcionarios.views",
+        "description": "funcionarios.views",
+        "isExtraImport": true,
+        "detail": "funcionarios.views",
+        "documentation": {}
+    },
+    {
+        "label": "RedirectView",
+        "importPath": "django.views.generic.base",
+        "description": "django.views.generic.base",
+        "isExtraImport": true,
+        "detail": "django.views.generic.base",
         "documentation": {}
     },
     {
@@ -629,6 +941,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "cadastro_animal.migrations.0009_alter_animal_id",
+        "description": "cadastro_animal.migrations.0009_alter_animal_id",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('cadastro_animal', '0008_alter_animal_options_animal_adotado_animal_castrado_and_more'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='animal',\n            name='id',\n            field=models.CharField(editable=False, max_length=10, primary_key=True, serialize=False),\n        ),",
+        "detail": "cadastro_animal.migrations.0009_alter_animal_id",
+        "documentation": {}
+    },
+    {
         "label": "CadastroAdmin",
         "kind": 6,
         "importPath": "cadastro_animal.admin",
@@ -651,7 +972,7 @@
         "kind": 6,
         "importPath": "cadastro_animal.forms",
         "description": "cadastro_animal.forms",
-        "peekOfCode": "class AnimalForm(forms.ModelForm):\n    class Meta:\n        model = Animal\n        exclude = ['id','data']",
+        "peekOfCode": "class AnimalForm(forms.ModelForm):\n    class Meta:\n        model = Animal\n        exclude = ['id','data', 'adotado']",
         "detail": "cadastro_animal.forms",
         "documentation": {}
     },
@@ -669,7 +990,7 @@
         "kind": 6,
         "importPath": "cadastro_animal.serializers",
         "description": "cadastro_animal.serializers",
-        "peekOfCode": "class AnimalSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Animal\n        fields = ['nome','idade', 'foto']\n     # Sobrescreva o método create para definir o ID automaticamente\n    def create(self, validated_data):\n        # # Definir o novo ID no validated_data usando unicode\n        validated_data['id'] = str(uuid.uuid4())\n        # Chamar o método create da superclasse para criar o objeto\n        return super().create(validated_data)",
+        "peekOfCode": "class AnimalSerializer(serializers.ModelSerializer):\n    class Meta:\n       model = Animal\n       exclude = ['id', 'adotado', 'data']\n     # Sobrescreva o método create para definir o ID automaticamente\n    def create(self, validated_data):\n        # # Definir o novo ID no validated_data usando unicode\n        validated_data['id'] = str(uuid.uuid4())\n        # Chamar o método create da superclasse para criar o objeto\n        return super().create(validated_data)",
         "detail": "cadastro_animal.serializers",
         "documentation": {}
     },
@@ -696,7 +1017,7 @@
         "kind": 2,
         "importPath": "cadastro_animal.views",
         "description": "cadastro_animal.views",
-        "peekOfCode": "def pesquisa_animal(request):\n    query = request.GET.get('q')\n    list_animals = Animal.objects.filter(\n        Q(nome__icontains=query) | \n        Q(especie__icontains=query) |\n        Q(raca__icontains=query)|\n        Q(porte__icontains=query)|\n         Q(idade__icontains=query)|\n        Q(sexo__icontains=query)\n    ) if query else Animal.objects.filter(adotado=False)",
+        "peekOfCode": "def pesquisa_animal(request):\n    query = request.GET.get('q')\n    list_animals = Animal.objects.filter(\n        Q(nome__icontains=query) | \n        Q(especie__icontains=query) |\n        Q(raca__icontains=query)|\n        Q(porte__icontains=query)|\n        Q(idade__icontains=query)|\n        Q(sexo__icontains=query)\n    ) if query else Animal.objects.filter(adotado=False)",
         "detail": "cadastro_animal.views",
         "documentation": {}
     },
@@ -705,8 +1026,152 @@
         "kind": 2,
         "importPath": "cadastro_animal.views",
         "description": "cadastro_animal.views",
-        "peekOfCode": "def criar_animal(request):\n    sucess = False\n    if(request.method=='GET'):\n        form = AnimalForm()\n    else:\n        form = AnimalForm(request.POST, request.FILES)\n        if form.is_valid():\n            sucess = True\n            form.save()\n    context = {",
+        "peekOfCode": "def criar_animal(request):\n    sucess = False  # Inicialmente, definimos sucesso como falso\n    if request.method == 'POST':\n        form = AnimalForm(request.POST, request.FILES)\n        if form.is_valid():\n            animal = form.save(commit=False)\n            animal.id = uuid.uuid4()\n            animal.save()\n            sucess = True  # Definimos sucesso como verdadeiro após salvar com sucesso\n            # Limpar o formulário após salvar",
         "detail": "cadastro_animal.views",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "detalhesanimal.migrations.0001_initial",
+        "description": "detalhesanimal.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Animal',\n            fields=[\n                ('id', models.CharField(editable=False, max_length=10, primary_key=True, serialize=False)),\n                ('nome', models.CharField(max_length=50)),",
+        "detail": "detalhesanimal.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "detalhesanimal.migrations.0002_alter_animal_id",
+        "description": "detalhesanimal.migrations.0002_alter_animal_id",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('detalhesanimal', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='animal',\n            name='id',\n            field=models.CharField(max_length=10, primary_key=True, serialize=False),\n        ),",
+        "detail": "detalhesanimal.migrations.0002_alter_animal_id",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "detalhesanimal.migrations.0003_cadastro_animal_delete_animal",
+        "description": "detalhesanimal.migrations.0003_cadastro_animal_delete_animal",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('detalhesanimal', '0002_alter_animal_id'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='cadastro_animal',\n            fields=[\n                ('id', models.CharField(max_length=10, primary_key=True, serialize=False)),\n                ('nome', models.CharField(max_length=50)),",
+        "detail": "detalhesanimal.migrations.0003_cadastro_animal_delete_animal",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "detalhesanimal.migrations.0004_animal_delete_cadastro_animal",
+        "description": "detalhesanimal.migrations.0004_animal_delete_cadastro_animal",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('detalhesanimal', '0003_cadastro_animal_delete_animal'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Animal',\n            fields=[\n                ('id', models.CharField(max_length=10, primary_key=True, serialize=False)),\n                ('nome', models.CharField(max_length=50)),",
+        "detail": "detalhesanimal.migrations.0004_animal_delete_cadastro_animal",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "detalhesanimal.migrations.0005_cadastro_animais_delete_animal",
+        "description": "detalhesanimal.migrations.0005_cadastro_animais_delete_animal",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('detalhesanimal', '0004_animal_delete_cadastro_animal'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='cadastro_animais',\n            fields=[\n                ('id', models.CharField(max_length=10, primary_key=True, serialize=False)),\n                ('nome', models.CharField(max_length=50)),",
+        "detail": "detalhesanimal.migrations.0005_cadastro_animais_delete_animal",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "detalhesanimal.migrations.0006_cadastro_animais_foto",
+        "description": "detalhesanimal.migrations.0006_cadastro_animais_foto",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('detalhesanimal', '0005_cadastro_animais_delete_animal'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='cadastro_animais',\n            name='foto',\n            field=models.ImageField(blank=True, upload_to='animal_photos/'),\n        ),",
+        "detail": "detalhesanimal.migrations.0006_cadastro_animais_foto",
+        "documentation": {}
+    },
+    {
+        "label": "cadastro_animaisAdmin",
+        "kind": 6,
+        "importPath": "detalhesanimal.admin",
+        "description": "detalhesanimal.admin",
+        "peekOfCode": "class cadastro_animaisAdmin(admin.ModelAdmin):\n    list_display = ['nome','idade','raca','especie','foto'] \n    search_fields = ['nome','idade','raca','especie']\n    list_filter= ['data']",
+        "detail": "detalhesanimal.admin",
+        "documentation": {}
+    },
+    {
+        "label": "DetalhesanimalConfig",
+        "kind": 6,
+        "importPath": "detalhesanimal.apps",
+        "description": "detalhesanimal.apps",
+        "peekOfCode": "class DetalhesanimalConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'detalhesanimal'",
+        "detail": "detalhesanimal.apps",
+        "documentation": {}
+    },
+    {
+        "label": "cadastro_animais",
+        "kind": 6,
+        "importPath": "detalhesanimal.models",
+        "description": "detalhesanimal.models",
+        "peekOfCode": "class cadastro_animais(models.Model):\n    id = models.CharField(max_length=10, primary_key=True) #Vinculado ao chip do animal\n    nome = models.CharField(max_length=50) \n    idade = models.IntegerField()\n    especie_choices = [\n        ('cachorro', 'Cachorro'),\n        ('gato', 'Gato'),\n    ]\n    especie = models.CharField(max_length=10, choices=especie_choices)\n    raca = models.CharField(max_length=20)",
+        "detail": "detalhesanimal.models",
+        "documentation": {}
+    },
+    {
+        "label": "detalhes_animal",
+        "kind": 2,
+        "importPath": "detalhesanimal.views",
+        "description": "detalhesanimal.views",
+        "peekOfCode": "def detalhes_animal(request, animal_id):\n    animal = Animal.objects.get(id=animal_id)\n    # Renderizar o template com as informações do animal\n    return render(request, 'detalhes_animal.html', {'animal': animal})",
+        "detail": "detalhesanimal.views",
+        "documentation": {}
+    },
+    {
+        "label": "FuncionariosConfig",
+        "kind": 6,
+        "importPath": "funcionarios.apps",
+        "description": "funcionarios.apps",
+        "peekOfCode": "class FuncionariosConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'funcionarios'",
+        "detail": "funcionarios.apps",
+        "documentation": {}
+    },
+    {
+        "label": "LoginForm",
+        "kind": 6,
+        "importPath": "funcionarios.forms",
+        "description": "funcionarios.forms",
+        "peekOfCode": "class LoginForm(AuthenticationForm):\n    pass",
+        "detail": "funcionarios.forms",
+        "documentation": {}
+    },
+    {
+        "label": "funcionarios",
+        "kind": 6,
+        "importPath": "funcionarios.models",
+        "description": "funcionarios.models",
+        "peekOfCode": "class funcionarios(models.Model):\n    id = models.AutoField(primary_key=True)\n    nome = models.CharField(max_length=50) \n    email = models.EmailField(max_length=50, unique=True)\n    cargo_choices = [\n        ('voluntário', 'Voluntário'),\n        ('cuidador', 'Cuidador'),\n        ('admin', 'Admin'),\n    ]\n    cargo = models.CharField(max_length=15, choices=cargo_choices)",
+        "detail": "funcionarios.models",
+        "documentation": {}
+    },
+    {
+        "label": "login_view",
+        "kind": 2,
+        "importPath": "funcionarios.views",
+        "description": "funcionarios.views",
+        "peekOfCode": "def login_view(request):\n    if request.method == 'POST':\n        form = LoginForm(request.POST)\n        if form.is_valid():\n            username = form.cleaned_data['username']\n            password = form.cleaned_data['password']\n            user = authenticate(request, username=username, password=password)\n            if user is not None:\n                login(request, user)\n                return redirect('pagina_apos_login')",
+        "detail": "funcionarios.views",
+        "documentation": {}
+    },
+    {
+        "label": "pagina_apos_login",
+        "kind": 2,
+        "importPath": "funcionarios.views",
+        "description": "funcionarios.views",
+        "peekOfCode": "def pagina_apos_login(request):\n    animais = Animal.objects.all()\n    return render(request, 'pagina_apos_login.html', {'animais': animais})\ndef editar_animal(request, animal_id):\n    animal = Animal.objects.get(id=animal_id)\n    if request.method == 'POST':\n        form = AnimalForm(request.POST, instance=animal)\n        if form.is_valid():\n            form.save()\n            return redirect('pagina_apos_login')",
+        "detail": "funcionarios.views",
+        "documentation": {}
+    },
+    {
+        "label": "editar_animal",
+        "kind": 2,
+        "importPath": "funcionarios.views",
+        "description": "funcionarios.views",
+        "peekOfCode": "def editar_animal(request, animal_id):\n    animal = Animal.objects.get(id=animal_id)\n    if request.method == 'POST':\n        form = AnimalForm(request.POST, instance=animal)\n        if form.is_valid():\n            form.save()\n            return redirect('pagina_apos_login')\n    else:\n        form = AnimalForm(instance=animal)\n    return render(request, 'editar_animal.html', {'form': form})",
+        "detail": "funcionarios.views",
         "documentation": {}
     },
     {
@@ -831,7 +1296,7 @@
         "kind": 5,
         "importPath": "projeto_final.settings",
         "description": "projeto_final.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\n# Defina o diretório onde seus arquivos estáticos serão coletados\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Defina o URL base para os arquivos estáticos\nSTATIC_URL = '/static/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\n# Defina o diretório onde seus arquivos estáticos serão coletados\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Defina o URL base para os arquivos estáticos\nSTATIC_URL = '/static/'\n# Adicione o caminho para o diretório onde seus arquivos estáticos estão localizados",
         "detail": "projeto_final.settings",
         "documentation": {}
     },
@@ -840,7 +1305,7 @@
         "kind": 5,
         "importPath": "projeto_final.settings",
         "description": "projeto_final.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\n# Defina o diretório onde seus arquivos estáticos serão coletados\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Defina o URL base para os arquivos estáticos\nSTATIC_URL = '/static/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')\nMEDIA_URL = '/media/'",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\n# Defina o diretório onde seus arquivos estáticos serão coletados\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Defina o URL base para os arquivos estáticos\nSTATIC_URL = '/static/'\n# Adicione o caminho para o diretório onde seus arquivos estáticos estão localizados\nSTATICFILES_DIRS = [",
         "detail": "projeto_final.settings",
         "documentation": {}
     },
@@ -849,7 +1314,7 @@
         "kind": 5,
         "importPath": "projeto_final.settings",
         "description": "projeto_final.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\n# Defina o diretório onde seus arquivos estáticos serão coletados\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Defina o URL base para os arquivos estáticos\nSTATIC_URL = '/static/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')\nMEDIA_URL = '/media/'\n# Default primary key field type",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\n# Defina o diretório onde seus arquivos estáticos serão coletados\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Defina o URL base para os arquivos estáticos\nSTATIC_URL = '/static/'\n# Adicione o caminho para o diretório onde seus arquivos estáticos estão localizados\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static'),",
         "detail": "projeto_final.settings",
         "documentation": {}
     },
@@ -858,7 +1323,7 @@
         "kind": 5,
         "importPath": "projeto_final.settings",
         "description": "projeto_final.settings",
-        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Defina o URL base para os arquivos estáticos\nSTATIC_URL = '/static/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Defina o URL base para os arquivos estáticos\nSTATIC_URL = '/static/'\n# Adicione o caminho para o diretório onde seus arquivos estáticos estão localizados\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static'),\n]\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')\nMEDIA_URL = '/media/'\n# Default primary key field type",
         "detail": "projeto_final.settings",
         "documentation": {}
     },
@@ -867,7 +1332,16 @@
         "kind": 5,
         "importPath": "projeto_final.settings",
         "description": "projeto_final.settings",
-        "peekOfCode": "STATIC_URL = '/static/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATIC_URL = '/static/'\n# Adicione o caminho para o diretório onde seus arquivos estáticos estão localizados\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static'),\n]\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "projeto_final.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "projeto_final.settings",
+        "description": "projeto_final.settings",
+        "peekOfCode": "STATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static'),\n]\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')\nMEDIA_URL = '/media/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "projeto_final.settings",
         "documentation": {}
     },
@@ -903,7 +1377,7 @@
         "kind": 5,
         "importPath": "projeto_final.urls",
         "description": "projeto_final.urls",
-        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register('cadastro', AnimalViewSet)\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('home/', home),\n     path('pesquisa/', pesquisa_animal, name='pesquisa_animal'),\n    path('cadastrarAnimal/',criar_animal),\n    path('',include(router.urls)),\n    ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register('cadastro', AnimalViewSet)\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('home/', home),\n    path('pesquisa/', pesquisa_animal, name='pesquisa_animal'),\n    path('cadastrarAnimal/',criar_animal),\n    path('detalhes/<uuid:animal_id>/', detalhes_animal, name='detalhes_animal'),\n    path('login/', login_view, name='login'),\n    path('pagina_apos_login/', pagina_apos_login, name='pagina_apos_login'),",
         "detail": "projeto_final.urls",
         "documentation": {}
     },
@@ -912,7 +1386,7 @@
         "kind": 5,
         "importPath": "projeto_final.urls",
         "description": "projeto_final.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('home/', home),\n     path('pesquisa/', pesquisa_animal, name='pesquisa_animal'),\n    path('cadastrarAnimal/',criar_animal),\n    path('',include(router.urls)),\n    ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('home/', home),\n    path('pesquisa/', pesquisa_animal, name='pesquisa_animal'),\n    path('cadastrarAnimal/',criar_animal),\n    path('detalhes/<uuid:animal_id>/', detalhes_animal, name='detalhes_animal'),\n    path('login/', login_view, name='login'),\n    path('pagina_apos_login/', pagina_apos_login, name='pagina_apos_login'),\n    path('editar_animal/<uuid:animal_id>/', editar_animal, name='editar_animal'),\n    path('', include(router.urls)),",
         "detail": "projeto_final.urls",
         "documentation": {}
     },

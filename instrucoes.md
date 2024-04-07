@@ -41,7 +41,8 @@ terminal: python manage.py startapp nome_da_pasta
 
 #### Install Rest Api
 
-```pip install django djangorestframework
+```
+pip install django djangorestframework
 
 ```
 
