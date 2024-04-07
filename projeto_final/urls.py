@@ -19,14 +19,15 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import routers
-from cadastro_animal.views import home
+from cadastro_animal.views import home, verify_register
 from cadastro_animal.views import criar_animal, AnimalViewSet
+from cadastro_animal.views import verify_register
 from cadastro_animal.views import pesquisa_animal
 from detalhesanimal.views import detalhes_animal
 from funcionarios.views import login_view, editar_animal, pagina_apos_login 
 from django.views.generic.base import RedirectView
 import uuid
-
+from gestao_adocao.views import adocao_create
 
 router = routers.DefaultRouter()
 router.register('cadastro', AnimalViewSet)
@@ -37,9 +38,11 @@ urlpatterns = [
     path('home/', home),
     path('pesquisa/', pesquisa_animal, name='pesquisa_animal'),
     path('cadastrarAnimal/',criar_animal),
+    path('verifyRegister/', verify_register),
     path('detalhes/<uuid:animal_id>/', detalhes_animal, name='detalhes_animal'),
     path('login/', login_view, name='login'),
     path('pagina_apos_login/', pagina_apos_login, name='pagina_apos_login'),
+    path('adocao/create/', adocao_create, name='adocao_create'),
     path('editar_animal/<uuid:animal_id>/', editar_animal, name='editar_animal'),
     path('', include(router.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

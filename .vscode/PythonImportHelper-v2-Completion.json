@@ -312,6 +312,14 @@
         "documentation": {}
     },
     {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "django.db.models.deletion",
         "kind": 6,
         "isExtraImport": true,
@@ -361,11 +369,11 @@
         "documentation": {}
     },
     {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
         "isExtraImport": true,
-        "detail": "django.apps",
+        "detail": "django.contrib",
         "documentation": {}
     },
     {
@@ -393,11 +401,19 @@
         "documentation": {}
     },
     {
-        "label": "Animal",
-        "importPath": "cadastro_animal.models",
-        "description": "cadastro_animal.models",
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
         "isExtraImport": true,
-        "detail": "cadastro_animal.models",
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
         "documentation": {}
     },
     {
@@ -438,6 +454,22 @@
         "description": "cadastro_animal.models",
         "isExtraImport": true,
         "detail": "cadastro_animal.models",
+        "documentation": {}
+    },
+    {
+        "label": "Animal",
+        "importPath": "cadastro_animal.models",
+        "description": "cadastro_animal.models",
+        "isExtraImport": true,
+        "detail": "cadastro_animal.models",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
         "documentation": {}
     },
     {
@@ -513,6 +545,22 @@
         "documentation": {}
     },
     {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "uuid",
         "kind": 6,
         "isExtraImport": true,
@@ -536,6 +584,14 @@
         "description": "datetime",
         "isExtraImport": true,
         "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
         "documentation": {}
     },
     {
@@ -596,6 +652,14 @@
         "documentation": {}
     },
     {
+        "label": "verify_register",
+        "importPath": "cadastro_animal.views",
+        "description": "cadastro_animal.views",
+        "isExtraImport": true,
+        "detail": "cadastro_animal.views",
+        "documentation": {}
+    },
+    {
         "label": "criar_animal",
         "importPath": "cadastro_animal.views",
         "description": "cadastro_animal.views",
@@ -605,6 +669,14 @@
     },
     {
         "label": "AnimalViewSet",
+        "importPath": "cadastro_animal.views",
+        "description": "cadastro_animal.views",
+        "isExtraImport": true,
+        "detail": "cadastro_animal.views",
+        "documentation": {}
+    },
+    {
+        "label": "verify_register",
         "importPath": "cadastro_animal.views",
         "description": "cadastro_animal.views",
         "isExtraImport": true,
@@ -689,6 +761,22 @@
         "description": "funcionarios.forms",
         "isExtraImport": true,
         "detail": "funcionarios.forms",
+        "documentation": {}
+    },
+    {
+        "label": "adocao",
+        "importPath": "banco.models",
+        "description": "banco.models",
+        "isExtraImport": true,
+        "detail": "banco.models",
+        "documentation": {}
+    },
+    {
+        "label": "adocao",
+        "importPath": "banco.models",
+        "description": "banco.models",
+        "isExtraImport": true,
+        "detail": "banco.models",
         "documentation": {}
     },
     {
@@ -786,6 +874,14 @@
         "description": "django.views.generic.base",
         "isExtraImport": true,
         "detail": "django.views.generic.base",
+        "documentation": {}
+    },
+    {
+        "label": "adocao_create",
+        "importPath": "gestao_adocao.views",
+        "description": "gestao_adocao.views",
+        "isExtraImport": true,
+        "detail": "gestao_adocao.views",
         "documentation": {}
     },
     {
@@ -1031,6 +1127,15 @@
         "documentation": {}
     },
     {
+        "label": "verify_register",
+        "kind": 2,
+        "importPath": "cadastro_animal.views",
+        "description": "cadastro_animal.views",
+        "peekOfCode": "def verify_register(request):\n        return render(request, 'verifyRegister.html')\n#! O AnimalSerializer é uma classe que converte objetos Animal em formatos como JSON para serem enviados pela API e vice-versa.\nclass AnimalViewSet(viewsets.ModelViewSet):\n    queryset = Animal.objects.all()\n    serializer_class = AnimalSerializer\n# Com essa configuração,voce consegue fazer as operações CRUD padrão para o modelo Animal . Isso inclui criar, recuperar, atualizar e excluir objetos Animal através da API REST.",
+        "detail": "cadastro_animal.views",
+        "documentation": {}
+    },
+    {
         "label": "Migration",
         "kind": 6,
         "importPath": "detalhesanimal.migrations.0001_initial",
@@ -1172,6 +1277,33 @@
         "description": "funcionarios.views",
         "peekOfCode": "def editar_animal(request, animal_id):\n    animal = Animal.objects.get(id=animal_id)\n    if request.method == 'POST':\n        form = AnimalForm(request.POST, instance=animal)\n        if form.is_valid():\n            form.save()\n            return redirect('pagina_apos_login')\n    else:\n        form = AnimalForm(instance=animal)\n    return render(request, 'editar_animal.html', {'form': form})",
         "detail": "funcionarios.views",
+        "documentation": {}
+    },
+    {
+        "label": "GestaoAdocaoConfig",
+        "kind": 6,
+        "importPath": "gestao_adocao.apps",
+        "description": "gestao_adocao.apps",
+        "peekOfCode": "class GestaoAdocaoConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'gestao_adocao'",
+        "detail": "gestao_adocao.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AdocaoForm",
+        "kind": 6,
+        "importPath": "gestao_adocao.forms",
+        "description": "gestao_adocao.forms",
+        "peekOfCode": "class AdocaoForm(forms.ModelForm):\n    class Meta:\n        model = adocao\n        fields = ['animais', 'adotante', 'termo_aceito']",
+        "detail": "gestao_adocao.forms",
+        "documentation": {}
+    },
+    {
+        "label": "adocao_create",
+        "kind": 2,
+        "importPath": "gestao_adocao.views",
+        "description": "gestao_adocao.views",
+        "peekOfCode": "def adocao_create(request):\n    if request.method == 'POST':\n        form = AdocaoForm(request.POST)\n        if form.is_valid():\n            adocao_instance = form.save()\n            # Redirect to a success page or do something else\n            return redirect('success_url_name')  # Replace 'success_url_name' with the name of your success URL\n    else:\n        form = AdocaoForm()\n    return render(request, 'adocao_form.html', {'form': form})",
+        "detail": "gestao_adocao.views",
         "documentation": {}
     },
     {
@@ -1377,7 +1509,7 @@
         "kind": 5,
         "importPath": "projeto_final.urls",
         "description": "projeto_final.urls",
-        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register('cadastro', AnimalViewSet)\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('home/', home),\n    path('pesquisa/', pesquisa_animal, name='pesquisa_animal'),\n    path('cadastrarAnimal/',criar_animal),\n    path('detalhes/<uuid:animal_id>/', detalhes_animal, name='detalhes_animal'),\n    path('login/', login_view, name='login'),\n    path('pagina_apos_login/', pagina_apos_login, name='pagina_apos_login'),",
+        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register('cadastro', AnimalViewSet)\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('home/', home),\n    path('pesquisa/', pesquisa_animal, name='pesquisa_animal'),\n    path('cadastrarAnimal/',criar_animal),\n    path('verifyRegister/', verify_register),\n    path('detalhes/<uuid:animal_id>/', detalhes_animal, name='detalhes_animal'),\n    path('login/', login_view, name='login'),",
         "detail": "projeto_final.urls",
         "documentation": {}
     },
@@ -1386,7 +1518,7 @@
         "kind": 5,
         "importPath": "projeto_final.urls",
         "description": "projeto_final.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('home/', home),\n    path('pesquisa/', pesquisa_animal, name='pesquisa_animal'),\n    path('cadastrarAnimal/',criar_animal),\n    path('detalhes/<uuid:animal_id>/', detalhes_animal, name='detalhes_animal'),\n    path('login/', login_view, name='login'),\n    path('pagina_apos_login/', pagina_apos_login, name='pagina_apos_login'),\n    path('editar_animal/<uuid:animal_id>/', editar_animal, name='editar_animal'),\n    path('', include(router.urls)),",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('home/', home),\n    path('pesquisa/', pesquisa_animal, name='pesquisa_animal'),\n    path('cadastrarAnimal/',criar_animal),\n    path('verifyRegister/', verify_register),\n    path('detalhes/<uuid:animal_id>/', detalhes_animal, name='detalhes_animal'),\n    path('login/', login_view, name='login'),\n    path('pagina_apos_login/', pagina_apos_login, name='pagina_apos_login'),\n    path('adocao/create/', adocao_create, name='adocao_create'),",
         "detail": "projeto_final.urls",
         "documentation": {}
     },

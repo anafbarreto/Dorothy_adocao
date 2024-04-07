@@ -73,7 +73,7 @@
           <p class="card-text">Idade: {{ animal.idade}}</p>
           <p class="card-text">Raça: {{ animal.raca}}</p>
 
-          <a href="#" class="btn custom-btn">Quero adotar</a>
+          <a href="/verifyRegister/" class="btn custom-btn" data-username="{{ animal.nome }}">Quero adotar</a>
           <a href="/detalhes/{{ animal.id }}" class="btn custom-btn">Detalhes</a>
         </div>
       </div>
@@ -86,5 +86,6 @@
         <img src="{% static 'icon/github.png' %}" class="github_icon" alt="Ícone GitHub">
       </a>
     </footer>
+ 
   </body>
 </html>
