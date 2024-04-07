@@ -100,10 +100,14 @@
                     <img src="{% static 'icon/icon-masc.png' %}" class="icon-gender">
                 {% endif %}
 
-                <p class="card-text text-left align-left"><strong>Idade:</strong> {{ animal.idade}}</p>
-                <p class="card-text text-left align-left"><strong>Raça:</strong> {{ animal.raca}}</p>
+                <p class="card-text text-center align-left"><strong>Idade:</strong> {{ animal.idade}}</p>
+                <p class="card-text text-center align-left"><strong>Raça:</strong> {{ animal.raca}}</p>
 
-                <a href="/detalhes/{{ animal.id }}" class="btn custom-btn">Detalhes</a>
+          <a href="/verifyRegister/" class="btn custom-btn" data-username="{{ animal.nome }}">Quero adotar</a>
+          <a href="/detalhes/{{ animal.id }}" class="btn custom-btn">Detalhes</a>
+               
+
+             
             </div>
         </div>
     {% endfor %}
@@ -113,9 +117,13 @@
     Desenvolvido por Squad Dorothy Vaughan
     <a href="https://github.com/anafbarreto/Abrigo_animais" title="Página do projeto no github" class="github_link">
         <img src="{% static 'icon/github.png' %}" class="github_icon" alt="Ícone GitHub">
+      </a>
+    </footer>
+ 
+  </body>
     </a>
 </footer>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script>
     $(document).ready(function(){
@@ -138,6 +146,6 @@
             }
         });
     });
-</script>
+</script> -->
 </body>
 </html>

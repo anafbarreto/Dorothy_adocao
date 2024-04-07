@@ -50,6 +50,10 @@ def criar_animal(request):
     
     return render(request, 'cadastro.html', {'form': form, 'sucess': sucess})
 
+def verify_register(request):
+       
+        return render(request, 'verifyRegister.html')
+    
 #! O AnimalSerializer é uma classe que converte objetos Animal em formatos como JSON para serem enviados pela API e vice-versa.
 class AnimalViewSet(viewsets.ModelViewSet):
     queryset = Animal.objects.all()

@@ -596,6 +596,14 @@
         "documentation": {}
     },
     {
+        "label": "verify_register",
+        "importPath": "cadastro_animal.views",
+        "description": "cadastro_animal.views",
+        "isExtraImport": true,
+        "detail": "cadastro_animal.views",
+        "documentation": {}
+    },
+    {
         "label": "criar_animal",
         "importPath": "cadastro_animal.views",
         "description": "cadastro_animal.views",
@@ -605,6 +613,14 @@
     },
     {
         "label": "AnimalViewSet",
+        "importPath": "cadastro_animal.views",
+        "description": "cadastro_animal.views",
+        "isExtraImport": true,
+        "detail": "cadastro_animal.views",
+        "documentation": {}
+    },
+    {
+        "label": "verify_register",
         "importPath": "cadastro_animal.views",
         "description": "cadastro_animal.views",
         "isExtraImport": true,
@@ -1031,6 +1047,15 @@
         "documentation": {}
     },
     {
+        "label": "verify_register",
+        "kind": 2,
+        "importPath": "cadastro_animal.views",
+        "description": "cadastro_animal.views",
+        "peekOfCode": "def verify_register(request):\n        return render(request, 'verifyRegister.html')\n#! O AnimalSerializer é uma classe que converte objetos Animal em formatos como JSON para serem enviados pela API e vice-versa.\nclass AnimalViewSet(viewsets.ModelViewSet):\n    queryset = Animal.objects.all()\n    serializer_class = AnimalSerializer\n# Com essa configuração,voce consegue fazer as operações CRUD padrão para o modelo Animal . Isso inclui criar, recuperar, atualizar e excluir objetos Animal através da API REST.",
+        "detail": "cadastro_animal.views",
+        "documentation": {}
+    },
+    {
         "label": "Migration",
         "kind": 6,
         "importPath": "detalhesanimal.migrations.0001_initial",
@@ -1377,7 +1402,7 @@
         "kind": 5,
         "importPath": "projeto_final.urls",
         "description": "projeto_final.urls",
-        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register('cadastro', AnimalViewSet)\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('home/', home),\n    path('pesquisa/', pesquisa_animal, name='pesquisa_animal'),\n    path('cadastrarAnimal/',criar_animal),\n    path('detalhes/<uuid:animal_id>/', detalhes_animal, name='detalhes_animal'),\n    path('login/', login_view, name='login'),\n    path('pagina_apos_login/', pagina_apos_login, name='pagina_apos_login'),",
+        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register('cadastro', AnimalViewSet)\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('home/', home),\n    path('pesquisa/', pesquisa_animal, name='pesquisa_animal'),\n    path('cadastrarAnimal/',criar_animal),\n    path('verifyRegister/', verify_register),\n    path('detalhes/<uuid:animal_id>/', detalhes_animal, name='detalhes_animal'),\n    path('login/', login_view, name='login'),",
         "detail": "projeto_final.urls",
         "documentation": {}
     },
@@ -1386,7 +1411,7 @@
         "kind": 5,
         "importPath": "projeto_final.urls",
         "description": "projeto_final.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('home/', home),\n    path('pesquisa/', pesquisa_animal, name='pesquisa_animal'),\n    path('cadastrarAnimal/',criar_animal),\n    path('detalhes/<uuid:animal_id>/', detalhes_animal, name='detalhes_animal'),\n    path('login/', login_view, name='login'),\n    path('pagina_apos_login/', pagina_apos_login, name='pagina_apos_login'),\n    path('editar_animal/<uuid:animal_id>/', editar_animal, name='editar_animal'),\n    path('', include(router.urls)),",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('home/', home),\n    path('pesquisa/', pesquisa_animal, name='pesquisa_animal'),\n    path('cadastrarAnimal/',criar_animal),\n    path('verifyRegister/', verify_register),\n    path('detalhes/<uuid:animal_id>/', detalhes_animal, name='detalhes_animal'),\n    path('login/', login_view, name='login'),\n    path('pagina_apos_login/', pagina_apos_login, name='pagina_apos_login'),\n    path('editar_animal/<uuid:animal_id>/', editar_animal, name='editar_animal'),",
         "detail": "projeto_final.urls",
         "documentation": {}
     },

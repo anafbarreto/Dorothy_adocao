@@ -19,8 +19,9 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import routers
-from cadastro_animal.views import home
+from cadastro_animal.views import home, verify_register
 from cadastro_animal.views import criar_animal, AnimalViewSet
+from cadastro_animal.views import verify_register
 from cadastro_animal.views import pesquisa_animal
 from detalhesanimal.views import detalhes_animal
 from funcionarios.views import login_view, editar_animal, pagina_apos_login 
@@ -37,6 +38,7 @@ urlpatterns = [
     path('home/', home),
     path('pesquisa/', pesquisa_animal, name='pesquisa_animal'),
     path('cadastrarAnimal/',criar_animal),
+    path('verifyRegister/', verify_register),
     path('detalhes/<uuid:animal_id>/', detalhes_animal, name='detalhes_animal'),
     path('login/', login_view, name='login'),
     path('pagina_apos_login/', pagina_apos_login, name='pagina_apos_login'),
