@@ -10,13 +10,6 @@ Se rolar erro de bloqueio de excecução: Set-ExecutionPolicy -ExecutionPolicy U
 #### Ativar ambiente virtual
 
 terminal: nome\scripts\activate (usar tab para autocomplete)
-ou
-
-- Atenção comando tem que ser usado dentro do ambiente virtual Abrigo_Animais
-
-```
-Scripts\Activate
-```
 
 #### Instalar o Django
 
@@ -30,6 +23,18 @@ terminal: pip install django-bootstrap-v5
 Se rolar erro: pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org django-bootstrap-v5 -vvv
 \*\* Com o ambiente virtual ativo
 
+#### Instalar Rest Api
+
+pip install djangorestframework
+Se rolar erro: pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org djangorestframework -vvv
+\*\* Com o ambiente virtual ativo
+
+#### Instalar Pilow biblioteca Python para processamento de imagens
+
+pip install pillow
+Se rolar erro: pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org pillow -vvv
+\*\* Com o ambiente virtual ativo
+
 #### Iniciar o projeto (com as configurações principais do sistema)
 
 terminal: django-admin startproject projeto_nome . (não esquecer do ponto, ele impede a duplicidade de pasta)
@@ -38,18 +43,6 @@ terminal: django-admin startproject projeto_nome . (não esquecer do ponto, ele 
 
 terminal: python manage.py startapp nome_da_pasta
 
-
-#### Install Rest Api
-
-```
-pip install django djangorestframework
-
-```
-
-#### Install Pilow biblioteca Python para processamento de imagens
-```pip install pillow
-
-```
 #### Executar o server
 
 terminal: python manage.py runserver

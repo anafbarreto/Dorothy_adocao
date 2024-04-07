@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'detalhesanimal',   
     'funcionarios',
-    'gestao_adocao'
 ]
 
 MIDDLEWARE = [

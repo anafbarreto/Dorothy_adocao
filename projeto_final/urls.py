@@ -27,7 +27,7 @@ from detalhesanimal.views import detalhes_animal
 from funcionarios.views import login_view, editar_animal, pagina_apos_login 
 from django.views.generic.base import RedirectView
 import uuid
-from gestao_adocao.views import adocao_create
+
 
 router = routers.DefaultRouter()
 router.register('cadastro', AnimalViewSet)
@@ -42,7 +42,6 @@ urlpatterns = [
     path('detalhes/<uuid:animal_id>/', detalhes_animal, name='detalhes_animal'),
     path('login/', login_view, name='login'),
     path('pagina_apos_login/', pagina_apos_login, name='pagina_apos_login'),
-    path('adocao/create/', adocao_create, name='adocao_create'),
     path('editar_animal/<uuid:animal_id>/', editar_animal, name='editar_animal'),
     path('', include(router.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
