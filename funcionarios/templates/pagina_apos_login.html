@@ -84,7 +84,7 @@
                     <p><strong>Adotado:</strong> {% if animal.adotado %} Sim {% else %} Não {% endif %}</p>
                     <p><strong>Data de Cadastro:</strong> {{ animal.data }}</p>
                     <div class="animal-icons">
-                        <a href="/editar_animal/animal_id">
+                        <a href="/editar_animal/{{ animal.id }}">
                             <i class="fas fa-pencil-alt"></i>
                         </a>
                         <i class="fas fa-trash"></i>
