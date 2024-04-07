@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'bootstrap5',
     'banco',
     'cadastro_animal',
-    'rest_framework'
+    'rest_framework',
+    'detalhesanimal',   
+    'funcionarios',
 ]
 
 MIDDLEWARE = [

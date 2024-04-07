@@ -1,5 +1,6 @@
 from django.db import models
 from cadastro_animal.models import Animal
+
 class Adotante(models.Model):
     id = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=50) 
