@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,6 @@
     {% load bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
-    {% load static %}
     <link rel="stylesheet" href="{% static 'css/search.css' %}" />
     <link rel="stylesheet" href="{% static 'css/home.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,6 +28,7 @@
             margin-bottom: 20px; /* Espaçamento entre os cards */
             display: flex;
             align-items: flex-start; /* Alinhar itens ao topo */
+            padding: 10px;
         }
         .animal-img {
             width: 200px; /* Largura fixa da imagem */
@@ -49,24 +50,54 @@
             align-items: center;
             margin-top: 10px;
         }
-        .animal-icons i {
-            margin-left: 10px; /* Adicione margem à esquerda para espaçamento entre os ícones */
-            font-size: 18px;
-            color: #333;
+        .animal-icons .btn-edit {
+            margin-left: 5px; /* Adicione margem à esquerda para espaçamento entre os ícones */
+            font-size: 14px;
+            color: #fff;
+            cursor: pointer; /* Altera o cursor para indicar que é clicável */
+            border: none;
+            background-color: #ffc107; /* Cor amarela fixa */
+            padding: 15px 15px; /* Adicione preenchimento ao botão */
+            border-radius: 4px; /* Arredonde as bordas do botão */
         }
+        .animal-icons .btn-edit:focus {
+            outline: none;
+        }
+        .animal-icons .btn-delete {
+            margin-left: 5px; /* Adicione margem à esquerda para espaçamento entre os ícones */
+            font-size: 14px;
+            color: #fff;
+            cursor: pointer; /* Altera o cursor para indicar que é clicável */
+            border: none;
+            background-color: #dc3545; /* Cor vermelha fixa */
+            padding: 15px 15px; /* Adicione preenchimento ao botão */
+            border-radius: 4px; /* Arredonde as bordas do botão */
+        }
+        .animal-icons .btn-delete:focus {
+            outline: none;
+        }
+        
     </style>
 </head>
 <body>
     <header class="header">
         <span class="dorothy">Dorothy</span> <span class="adocao">Adoção</span>
-        <a href="/home" title="Página inicial" class="pag_link">Home</a>
-        <a href="/cadastrarAnimal" title="Cadastramento" class="pag_link">Cadastrar Pet</a>
+        <a href="#" title="informacoes" class="pag_link">Quem somos</a>
+        <a href="/home" title="Página inicial" class="pag_link">Quero adotar</a>
         <a href="#parceiros" title="Parcerias" class="pag_link">Seja nosso parceiro</a>
         <a href="/login" title="Login" class="pag_link login_link">Entrar</a>
     </header>
+     
+    <!-- Botão para cadastrar novo animal -->
+    <a href="{% url 'criar_animal' %}" class="btn btn-secondary ml-auto">Cadastrar Animal</a>
 
     <h1 class="mt-5">Lista de Animais</h1>
     <div class="container">
+        {% if mensagem %}
+            <div class="alert alert-success" role="alert">
+                {{ mensagem }}
+            </div>
+        {% endif %}
         <ul class="list-unstyled">
             {% for animal in animais %}
             <li class="animal-card mb-4">
@@ -85,9 +116,12 @@
                     <p><strong>Data de Cadastro:</strong> {{ animal.data }}</p>
                     <div class="animal-icons">
                         <a href="/editar_animal/{{ animal.id }}">
-                            <i class="fas fa-pencil-alt"></i>
+                            <button type="button" class="btn-edit"><i class="fas fa-pencil-alt"></i></button>
                         </a>
-                        <i class="fas fa-trash"></i>
+                        <form id="delete-form-{{ animal.id }}" method="POST" action="{% url 'excluir_animal' animal.id %}">
+                            {% csrf_token %}
+                            <button type="button" class="btn-delete" onclick="confirmDelete('{{ animal.id }}')"><i class="fas fa-trash"></i></button>
+                        </form>
                     </div>
                 </div>
             </li>
@@ -100,5 +134,13 @@
             <img src="{% static 'icon/github.png' %}" class="github_icon" alt="Ícone GitHub">
         </a>
     </footer>
+
+    <script>
+        function confirmDelete(animalId) {
+            if (confirm("Tem certeza que deseja excluir este animal?")) {
+                document.getElementById("delete-form-" + animalId).submit();
+            }
+        }
+    </script>
 </body>
 </html>

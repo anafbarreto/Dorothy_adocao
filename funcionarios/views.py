@@ -1,8 +1,12 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login
 from cadastro_animal.models import Animal
 from cadastro_animal.forms import AnimalForm
 from funcionarios.forms import LoginForm
+from django.http import HttpResponseRedirect, JsonResponse
+from django.urls import reverse
+from django.contrib import messages
+
 
 def login_view(request):
     if request.method == 'POST':
@@ -24,13 +28,25 @@ def pagina_apos_login(request):
     animais = Animal.objects.all()
     return render(request, 'pagina_apos_login.html', {'animais': animais})
 
-def editar_animal(request, animal_id):
-    animal = Animal.objects.get(id=animal_id)
+def excluir_animal(request, animal_id):
     if request.method == 'POST':
-        form = AnimalForm(request.POST, instance=animal)
+        animal = get_object_or_404(Animal, pk=animal_id)
+        animal.delete()
+        return HttpResponseRedirect(reverse('pagina_apos_login')) 
+    else:
+        return JsonResponse({'erro': 'Método não permitido'}, status=405)
+
+
+def editar_animal(request, animal_id):
+    animal = get_object_or_404(Animal, id=animal_id)
+    if request.method == 'POST':
+        form = AnimalForm(request.POST, request.FILES, instance=animal)
         if form.is_valid():
             form.save()
             return redirect('pagina_apos_login')
     else:
         form = AnimalForm(instance=animal)
     return render(request, 'editar_animal.html', {'form': form})
+
+
+

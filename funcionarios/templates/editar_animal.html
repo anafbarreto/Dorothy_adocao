@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,6 @@
     {% load bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
-    {% load static %}
     <link rel="stylesheet" href="{% static 'css/search.css' %}" />
     <link rel="stylesheet" href="{% static 'css/home.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,8 +23,8 @@
 <body>
     <header class="header">
         <span class="dorothy">Dorothy</span> <span class="adocao">Adoção</span>
-        <a href="/home" title="Página inicial" class="pag_link">Home</a>
-        <a href="/cadastrarAnimal" title="Cadastramento" class="pag_link">Cadastrar Pet</a>
+        <a href="#" title="informacoes" class="pag_link">Quem somos</a>
+        <a href="/home" title="Página inicial" class="pag_link">Quero adotar</a>
         <a href="#parceiros" title="Parcerias" class="pag_link">Seja nosso parceiro</a>
         <a href="/login" title="Login" class="pag_link login_link">Entrar</a>
     </header>
@@ -32,6 +32,7 @@
     <div class="container">
         <h1 class="mt-5 mb-5">Editar Animal</h1>
         <form method="POST" enctype="multipart/form-data" class="row">
+            {% csrf_token %}
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="id_nome">Nome</label>
@@ -102,3 +103,24 @@
     </footer>
 </body>
 </html>
+
+<!-- <script>
+    document.getElementById('editar-animal-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var animalId = '{{ form.instance.id }}';  // Obtém o ID do animal
+        var formData = new FormData(this);
+        fetch('/editar_animal/' + animalId + '/', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Dados do animal atualizados:', data);
+            // Faça algo com a resposta, como redirecionar o usuário ou exibir uma mensagem de sucesso
+        })
+        .catch(error => {
+            console.error('Erro ao atualizar dados do animal:', error);
+            // Exiba uma mensagem de erro ao usuário
+        });
+    });
+</script> -->
