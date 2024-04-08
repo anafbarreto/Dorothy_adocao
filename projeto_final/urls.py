@@ -19,12 +19,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import routers
-from cadastro_animal.views import home, verify_register
+from cadastro_animal.views import home
 from cadastro_animal.views import criar_animal, AnimalViewSet
-from cadastro_animal.views import verify_register
 from cadastro_animal.views import pesquisa_animal
 from detalhesanimal.views import detalhes_animal
-from funcionarios.views import login_view, editar_animal, pagina_apos_login 
+from funcionarios.views import login_view, excluir_animal, pagina_apos_login, editar_animal 
 from django.views.generic.base import RedirectView
 import uuid
 
@@ -37,11 +36,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', home),
     path('pesquisa/', pesquisa_animal, name='pesquisa_animal'),
-    path('cadastrarAnimal/',criar_animal),
-    path('verifyRegister/', verify_register),
+    path('cadastrarAnimal/', criar_animal, name='criar_animal'),
     path('detalhes/<uuid:animal_id>/', detalhes_animal, name='detalhes_animal'),
     path('login/', login_view, name='login'),
     path('pagina_apos_login/', pagina_apos_login, name='pagina_apos_login'),
+    path('excluir_animal/<uuid:animal_id>/', excluir_animal, name='excluir_animal'),
     path('editar_animal/<uuid:animal_id>/', editar_animal, name='editar_animal'),
     path('', include(router.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

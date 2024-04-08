@@ -2,51 +2,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Squad Dorothy Vaughan">
-  <meta name="description" content="Abrigo de animais - desafio final">
-  <title>Home</title>
-  {% load bootstrap5 %}
-  {% bootstrap_css %}
-  {% bootstrap_javascript %}
-  <link rel="stylesheet" href="{% static 'css/search.css' %}">
-  <link rel="stylesheet" href="{% static 'css/home.css' %}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Radley:ital@0;1&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sigmar+One&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      position: relative;
-    }
-    .footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background-color: #144484; /* Azul escuro */
-      padding: 10px 0; /* Adicione o preenchimento desejado */
-      text-align: center;
-    }
-    .content {
-      margin-bottom: 60px; /* Ajuste conforme a altura do footer */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Squad Dorothy Vaughan">
+    <meta name="description" content="Abrigo de animais - desafio final">
+    <title>Home</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'css/modal.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Radley:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sigmar+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            position: relative;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #144484; /* Azul escuro */
+            padding: 10px 0; /* Adicione o preenchimento desejado */
+            text-align: center;
+        }
+        .content {
+            margin-bottom: 60px; /* Ajuste conforme a altura do footer */
+        }
+    </style>
 </head>
 <body>
 <header class="header">
-  <span class="dorothy">Dorothy</span> <span class="adocao">Adoção</span>
-  <a href="/home" title="Página inicial" class="pag_link">Home</a>
-  <a href="/cadastrarAnimal" title="Cadastramento" class="pag_link">Cadastrar Pet</a>
-  <a href="#parceiros" title="Parcerias" class="pag_link">Seja nosso parceiro</a>
-  <a href="#login" title="Login" class="pag_link login_link">Entrar</a>
+    <span class="dorothy">Dorothy</span> <span class="adocao">Adoção</span>
+    <a href="#" title="informacoes" class="pag_link">Quem somos</a>
+    <a href="/home" title="Página inicial" class="pag_link">Quero adotar</a>
+    <a href="#parceiros" title="Parcerias" class="pag_link">Seja nosso parceiro</a>
+    <a href="/login" title="Login" class="pag_link login_link">Entrar</a>
 </header>
-<div class="login-container content">
-    <h2>Login</h2>
+<div class="container_modal">
+  <h2>Acesse aqui</h2>
+  <br>
+    <img src="{% static 'img/image-modal.png' %}" class="image-modal" alt="Avatar mulher com gatinho">
+    <br>
     {% if form.errors %}
         <p>Usuário ou senha inválidos. Por favor, tente novamente.</p>
     {% endif %}
@@ -60,7 +63,7 @@
 <footer class="footer">
     Desenvolvido por Squad Dorothy Vaughan
     <a href="https://github.com/anafbarreto/Abrigo_animais" title="Página do projeto no github" class="github_link">
-      <img src="{% static 'icon/github.png' %}" class="github_icon" alt="Ícone GitHub">
+        <img src="{% static 'icon/github.png' %}" class="github_icon" alt="Ícone GitHub">
     </a>
 </footer>
 </body>
