@@ -1,24 +1,51 @@
-{% extends "inicio.html" %}
-{% load bootstrap5 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Adoção de Animais</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+            <h1 class="text-body-emphasis">Formulário de Adoção de Animais</h1>
+        </header>
+        
+        {% load bootstrap5 %}
+        {% if sucesso %}
+            <div class="alert alert-success" role="alert">
+                Adoção realizada com sucesso!
+            </div>
+        {% else %}
+            <form action="" method="POST" id="form">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                <button type="submit" class="btn btn-primary btn-block">Finalizar adoção</button>
+            </form>
+        {% endif %}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+<!-- {% load bootstrap5 %}
 {% block principal %}
 
   <h1 class="text-body-emphasis">Formulário de Adoção de Animais</h1>
 
-  <form action="" method="POST" id="form" novalidate>
+  {% if sucesso %}
+    <p class="alert alert-success">Adoção realizada com sucesso!</p>
+  {% else %} 
+  
+  <form action="" method="POST" id="form">
     {% csrf_token %}
     {% bootstrap_form form %}
-
-    {% if form.errors %}
-      <div class="alert alert-danger">
-        {% for field, error_list in form.errors.items %}
-          {% for error in error_list %}
-            {{ error }}
-          {% endfor %}
-        {% endfor %}
-      </div>
-    {% endif %}
-
-    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+    <button type="submit" class="btn btn-primary btn-block">Finalizar adoção</button>
   </form>
+  
+  {% endif %} 
 
-{% endblock %}
+{% endblock %} -->

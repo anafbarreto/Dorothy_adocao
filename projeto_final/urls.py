@@ -16,10 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from gestao_adocao.views import inicio, adocao
+from gestao_adocao.views import adocao
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', inicio),
+    #path('', inicio),
     path('adocao/', adocao),
 ]
