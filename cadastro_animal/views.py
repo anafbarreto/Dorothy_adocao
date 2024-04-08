@@ -14,6 +14,8 @@ def home(request):
   
     return render(request, 'home.html',{'list_animals':list_animals});
 
+def quemsomos(request):
+    return render(request, 'quemsomos.html')
 
 
 def pesquisa_animal(request):
