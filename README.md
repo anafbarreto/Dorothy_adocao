@@ -35,8 +35,8 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 
 #### O que foi feito:
 
-1. Maria Carolina criou barra de pesquisa
-2.  Maria Carolina adicionou card de teste 
+1. Maria Carolina criou barra de pesquisa e fluxo de pesquisa.
+2.  Maria Carolina criou a renderização dos dados dos animais para o template home, juntamente a estilização dos cards com css e bootstrap.
 
 ### Criar pagina com o detalhamento dos animais:
 
