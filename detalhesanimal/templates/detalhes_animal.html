@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Squad Dorothy Vaughan">
+    <meta name="description" content="Abrigo de animais - desafio final">
+    <title>Home</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'css/search.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Radley:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sigmar+One&display=swap" rel="stylesheet">
+</head>
+
+<header class="header">
+    <span class="dorothy">Dorothy</span> <span class="adocao">Adoção</span>
+    <a href="#" title="informacoes" class="pag_link">Quem somos</a>
+    <a href="/home" title="Página inicial" class="pag_link">Quero adotar</a>
+    <a href="#parceiros" title="Parcerias" class="pag_link">Seja nosso parceiro</a>
+    <a href="/login" title="Login" class="pag_link login_link">Entrar</a>
+</header>
+<div class="container">
+    <h1 class="mt-5 mb-5">Detalhes {{animal.nome}}</h1>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="text-start"> <!-- Alinha à esquerda -->
+                <p class="mb-1"><strong>Nome:</strong> {{ animal.nome }}</p>
+                <p class="mb-1"><strong>Idade:</strong> {{ animal.idade }}</p>
+                <p class="mb-1"><strong>Espécie:</strong> {{ animal.get_especie_display }}</p>
+                <p class="mb-1"><strong>Raça:</strong> {{ animal.raca }}</p>
+                <p class="mb-1"><strong>Sexo:</strong> {{ animal.sexo }}</p>
+                <p class="mt-3 fw-bold">Historico de Saúde</p>
+                <ul class="list-text">
+                    <li class="list-text"><strong>Castrado:</strong> {% if animal.castrado %} Sim {% else %} Não {% endif %}</li>
+                    <li class="list-text"><strong>Vacinado:</strong> {% if animal.vacinado %} Sim {% else %} Não {% endif %}</li>
+                    <li class="list-text"><strong>Doença pré-existente:</strong> {{ animal.doencas_existentes }}</li>
+                </ul>
+                
+                <a href="" class="btn btn-warning text-light">Deseja continuar com a adoção</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card"> <!-- Card Bootstrap -->
+                <img src="{{ animal.foto.url }}" class="card-img-top" alt="Imagem do animal">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+

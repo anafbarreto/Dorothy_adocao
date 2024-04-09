@@ -1,5 +1,6 @@
 # Abrigo para adoção de animais
-O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o conhecimento adquirido em GitHub, HTML5, CSS3, Bancos de Dados e o Framework Django. Criando uma aplicação responsiva com recursos robustos, integrando elementos como banco de dados, gerenciamento de conteúdo e interatividade. 
+
+O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o conhecimento adquirido em GitHub, HTML5, CSS3, Bancos de Dados e o Framework Django. Criando uma aplicação responsiva com recursos robustos, integrando elementos como banco de dados, gerenciamento de conteúdo e interatividade.
 
 ## Integrantes do Squad:
 
@@ -18,11 +19,13 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 ---
 
 ### Forma de organização (como nos organizamos para fazer a resolução dos desafios):
+
 ### Criar banco de dados:
 
     Branch: Main
 
 #### O que foi feito:
+
 1. O squad discutiu a modelagem do banco;
 2. Anafbarreto fez as primeiras configurações do projeto
 
@@ -32,8 +35,8 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 
 #### O que foi feito:
 
-1.
-2.
+1. Maria Carolina criou barra de pesquisa
+2.  Maria Carolina adicionou card de teste 
 
 ### Criar pagina com o detalhamento dos animais:
 
@@ -59,7 +62,7 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 
 #### O que foi feito:
 
-1.
+1. Criação da aplicação de cadastro do animal e upload de imagem.
 2.
 
 ### Criar sistema de admin:
@@ -71,12 +74,6 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 1.
 2.
 
-
-
-
-
-
-
-<br><br><br>  
+<br><br><br>
 
 #### Prazo de conclusão: 12/04

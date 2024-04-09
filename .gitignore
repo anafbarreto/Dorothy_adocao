@@ -1,2 +1,10 @@
 .venv
-Abrigo_Animais/
+_venv_
+__pycache__/
+Lib/
+Scripts/
+pyvenv.cfg
+vscode
+.env
+.vscode/
+

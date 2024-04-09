@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Squad Dorothy Vaughan">
+    <meta name="description" content="Abrigo de animais - desafio final">
+    <title>Editar Animal</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'css/search.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Radley:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sigmar+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/registerAnimal.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/var.css' %}" />
+</head>
+<body>
+    <header class="header">
+        <span class="dorothy">Dorothy</span> <span class="adocao">Adoção</span>
+        <a href="#" title="informacoes" class="pag_link">Quem somos</a>
+        <a href="/home" title="Página inicial" class="pag_link">Quero adotar</a>
+        <a href="#parceiros" title="Parcerias" class="pag_link">Seja nosso parceiro</a>
+        <a href="/login" title="Login" class="pag_link login_link">Entrar</a>
+    </header>
+
+    <div class="container">
+        <h1 class="mt-5 mb-5">Editar Animal</h1>
+        <form method="POST" enctype="multipart/form-data" class="row">
+            {% csrf_token %}
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="id_nome">Nome</label>
+                    <input type="text" class="form-control" id="id_nome" name="nome" value="{{ form.instance.nome }}">
+                </div>
+                <div class="form-group">
+                    <label for="id_idade">Idade</label>
+                    <input type="text" class="form-control" id="id_idade" name="idade" value="{{ form.instance.idade }}">
+                </div>
+                <div class="form-group">
+                    <label for="id_especie">Espécie</label>
+                    <select class="form-control" id="id_especie" name="especie">
+                        {% for especie in form.fields.especie.choices %}
+                            <option value="{{ especie.0 }}" {% if especie.0 == form.instance.especie %} selected {% endif %}>{{ especie.1 }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="id_raca">Raça</label>
+                    <input type="text" class="form-control" id="id_raca" name="raca" value="{{ form.instance.raca }}">
+                </div>
+                <div class="form-group">
+                    <label for="id_sexo">Sexo</label>
+                    <select class="form-control" id="id_sexo" name="sexo">
+                        <option value="M" {% if form.instance.sexo == 'M' %} selected {% endif %}>Macho</option>
+                        <option value="F" {% if form.instance.sexo == 'F' %} selected {% endif %}>Fêmea</option>
+                    </select>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="id_castrado">Castrado</label>
+                    <input type="checkbox" id="id_castrado" name="castrado" {% if form.instance.castrado %} checked {% endif %}>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="id_vacinado">Vacinado</label>
+                    <input type="checkbox" id="id_vacinado" name="vacinado" {% if form.instance.vacinado %} checked {% endif %}>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="id_doencas_existentes">Doença Pré-existente</label>
+                    <input type="text" class="form-control" id="id_doencas_existentes" name="doencas_existentes" value="{{ form.instance.doencas_existentes }}">
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="id_foto">Foto</label>
+                    {% if form.instance.foto %}
+                        <img src="{{ form.instance.foto.url }}" class="img-thumbnail" alt="Foto do animal">
+                    {% endif %}
+                    <input type="file" class="form-control mt-2" id="id_foto" name="foto">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        Desenvolvido por Squad Dorothy Vaughan
+        <a href="https://github.com/anafbarreto/Abrigo_animais" title="Página do projeto no github" class="github_link">
+            <img src="{% static 'icon/github.png' %}" class="github_icon" alt="Ícone GitHub">
+        </a>
+    </footer>
+</body>
+</html>
+
+<!-- <script>
+    document.getElementById('editar-animal-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var animalId = '{{ form.instance.id }}';  // Obtém o ID do animal
+        var formData = new FormData(this);
+        fetch('/editar_animal/' + animalId + '/', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Dados do animal atualizados:', data);
+            // Faça algo com a resposta, como redirecionar o usuário ou exibir uma mensagem de sucesso
+        })
+        .catch(error => {
+            console.error('Erro ao atualizar dados do animal:', error);
+            // Exiba uma mensagem de erro ao usuário
+        });
+    });
+</script> -->
