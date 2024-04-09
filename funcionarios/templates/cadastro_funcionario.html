@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Squad Dorothy Vaughan" />
     <meta name="description" content="Abrigo de animais - desafio final" />
-    <title>Home</title>
+    <title>Cadastro de Funcionario</title>
     {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
-    <link rel="stylesheet" href="{% static 'css/modal.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'css/search.css' %}" />
     <link rel="stylesheet" href="{% static 'css/home.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,30 +25,13 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sigmar+One&display=swap"
       rel="stylesheet"
     />
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        position: relative;
-      }
-      .footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background-color: #144484; /* Azul escuro */
-        padding: 10px 0; /* Adicione o preenchimento desejado */
-        text-align: center;
-      }
-      .content {
-        margin-bottom: 60px; /* Ajuste conforme a altura do footer */
-      }
-    </style>
+    <link rel="stylesheet" href="{% static 'css/registerAnimal.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/var.css' %}" />
   </head>
   <body>
     <header class="header">
       <span class="dorothy">Dorothy</span> <span class="adocao">Adoção</span>
-      <a href="/home" class="pag_link">Home</a>
+      <a href="/home" title="informacoes" class="pag_link">Home</a>
       <a href="#" title="informacoes" class="pag_link">Quem somos</a>
       <a href="/home" title="Página inicial" class="pag_link">Quero adotar</a>
       <a href="#parceiros" title="Parcerias" class="pag_link"
@@ -55,27 +39,20 @@
       >
       <a href="/login" title="Login" class="pag_link login_link">Entrar</a>
     </header>
-    <div class="container_modal">
-      <h2 class="title">Acesse aqui</h2>
-      <br />
-      <img
-        src="{% static 'img/image-modal.png' %}"
-        class="image-modal"
-        alt="Avatar mulher com gatinho"
-      />
-      <br />
-      {% if form.errors %}
-      <p>Usuário ou senha inválidos. Por favor, tente novamente.</p>
-      {% endif %}
-      <form class="login-form" method="post">
-        {% csrf_token %} {{ form.as_p }}
 
-        <button type="submit" class="button_modal">Login</button><br /><br />
-        <a href="/cadastro_funcionario" class="link_modal">Cadastre-se</a>
+    <section>
+      {% if sucess %}
+      <p class="alert alert-success">Cadastro realizado com sucesso</p>
+      {% else %}
+      <form method="POST" enctype="multipart/form-data" class="container-box">
+        {% csrf_token %}
+        <div class="form">{{ form.as_p }}</div>
+        <button type="submit" class="btn btn-warning">Salvar</button>
       </form>
-    </div>
+      {% endif%}
+    </section>
 
-    <footer class="footer">
+    <footer>
       Desenvolvido por Squad Dorothy Vaughan
       <a
         href="https://github.com/anafbarreto/Abrigo_animais"

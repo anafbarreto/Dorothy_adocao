@@ -6,6 +6,7 @@ from funcionarios.forms import LoginForm
 from django.http import HttpResponseRedirect, JsonResponse
 from django.urls import reverse
 from django.contrib import messages
+from funcionarios.forms import CadastroFuncionarioForm
 
 
 def login_view(request):
@@ -48,5 +49,17 @@ def editar_animal(request, animal_id):
         form = AnimalForm(instance=animal)
     return render(request, 'editar_animal.html', {'form': form})
 
-
-
+def cadastro_funcionario(request):
+    sucess = False
+    if(request.method=='GET'):
+        form = CadastroFuncionarioForm()
+    else:
+        form = CadastroFuncionarioForm(request.POST)
+        if form.is_valid():
+            sucess = True
+            form.save()
+    context = {
+    'form':form,
+    'sucess':sucess
+    }
+    return render(request,'cadastro.html', context);

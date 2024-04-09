@@ -57,7 +57,14 @@
       #ffe20345 0%,
       #073aff00 100%
     ),
-  
     radial-gradient(142% 91% at 83% 7%, #ffdb00ff 1%, #ff000000 99%),
     radial-gradient(142% 91% at 111% 84%, #ffdb00ff 0%, #ffdb00ff 100%);
+}
+.container_modal .link_modal {
+  text-decoration: none;
+  color: #fff;
+}
+.container_modal .link_modal:hover {
+  
+  font-size: 20px;
 }
