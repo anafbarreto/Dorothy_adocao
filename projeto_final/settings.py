@@ -10,6 +10,14 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+# Instalar gerenciador do administrador:
+
+#         python manage.py createsuperuser
+    
+# O sistema vai pedir um username, email e senha (se esquecer já era!) 
+# nome: squad
+# senha: 123
+
 import os
 from pathlib import Path
 
