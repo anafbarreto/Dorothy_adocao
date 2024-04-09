@@ -41,12 +41,12 @@
     </header>
 
     <section>
-      <h2>Teste</h2>
       {% if sucess %}
       <p class="alert alert-success">Cadastro realizado com sucesso</p>
       {% else %}
       <form method="POST" enctype="multipart/form-data" class="container-box">
         {% csrf_token %}
+        <label class="title_form">Cadastro Parceiro</label>
         <div class="form">{{ form.as_p }}</div>
         <button type="submit" class="btn btn-warning">Salvar</button>
       </form>

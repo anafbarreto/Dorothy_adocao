@@ -62,4 +62,4 @@ def cadastro_funcionario(request):
     'form':form,
     'sucess':sucess
     }
-    return render(request,'cadastro.html', context);
+    return render(request,'cadastro_funcionario.html', context);
