@@ -95,15 +95,15 @@
 
                 <h5 class="card-title">{{ animal.nome }}</h5>
                 {% if animal.sexo == 'femea' %}
-                    <img src="{% static 'icon/icon-female.png' %}" class="icon-gender">
+                    <img src="{% static 'icon/icon-female.png' %}" class="icon-gender" alt="">
                 {% else %}
-                    <img src="{% static 'icon/icon-masc.png' %}" class="icon-gender">
+                    <img src="{% static 'icon/icon-masc.png' %}" class="icon-gender" alt="">
                 {% endif %}
 
                 <p class="card-text text-center align-left"><strong>Idade:</strong> {{ animal.idade}}</p>
                 <p class="card-text text-center align-left"><strong>Raça:</strong> {{ animal.raca}}</p>
 
-          <a href="#" class="btn custom-btn" data-username="{{ animal.nome }}">Quero adotar</a>
+          <a href="/adocao" class="btn custom-btn" data-username="{{ animal.nome }}">Quero adotar</a>
           <a href="/detalhes/{{ animal.id }}" class="btn custom-btn">Detalhes</a>
                
 
