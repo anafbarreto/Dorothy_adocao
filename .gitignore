@@ -4,6 +4,5 @@ __pycache__/
 Lib/
 Scripts/
 pyvenv.cfg
-vscode
 .env
 .vscode/
