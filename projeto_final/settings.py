@@ -125,10 +125,8 @@ USE_TZ = True
 # Defina o diretório onde seus arquivos estáticos serão coletados
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Defina o URL base para os arquivos estáticos
 STATIC_URL = '/static/'
 
-# Adicione o caminho para o diretório onde seus arquivos estáticos estão localizados
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
