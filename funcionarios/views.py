@@ -7,7 +7,9 @@ from django.http import HttpResponseRedirect, JsonResponse
 from django.urls import reverse
 from django.contrib import messages
 from funcionarios.forms import CadastroFuncionarioForm
+import logging
 
+logger = logging.getLogger(__name__)
 
 def login_view(request):
     if request.method == 'POST':
@@ -44,10 +46,14 @@ def editar_animal(request, animal_id):
         form = AnimalForm(request.POST, request.FILES, instance=animal)
         if form.is_valid():
             form.save()
+            logger.info('Formulário válido. Salvando alterações.')
             return redirect('pagina_apos_login')
+        else:
+            logger.error('Formulário inválido: %s', form.errors)
     else:
         form = AnimalForm(instance=animal)
     return render(request, 'editar_animal.html', {'form': form})
+
 
 def cadastro_funcionario(request):
     sucess = False
