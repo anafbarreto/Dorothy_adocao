@@ -44,8 +44,8 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 
 #### O que foi feito:
 
-1.
-2.
+1. Jane criou o aplicativo detalhes animal e Thais contribuiu com ajustes.
+2. Jane elaborou o template quemsomos.
 
 ### Criar um sistema de gerenciamento das adoções:
 
