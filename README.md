@@ -53,8 +53,9 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 
 #### O que foi feito:
 
-1. Clarice criou o arquivo forms.py para o formulário de adoção 
-2. Clarice inseriu restrições para cumprir os requistos de adoção
+1. Clarice criou o aplicativo gestão de adoção
+2. Após investigar sites de adoção, a Squad Doroty Vaughan optou por utilizar um termo de responsabilidade para autorizar a adoção
+3. Clarice modificou algumas restrições no modelo inicial do banco para cumprir os requistos de adoção
 
 ### Criar barra de pesquisa:
 
