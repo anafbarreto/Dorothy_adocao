@@ -55,10 +55,18 @@ header {
   justify-content: center;
   flex-wrap: wrap;
 }
-.card {
+  .card {
   text-align: center;
   margin-left: 2rem;
   margin-top: 2rem;
+} 
+
+.container-cards .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 .card-title {
   font-family: var(--font-Radley);
@@ -72,22 +80,23 @@ header {
   margin-bottom: 10px;
   object-fit: contain;
 }
-.custom-btn {
+.container-cards .btn {
+  max-width: 15rem;
   background-color: var(--color-yellow);
   color: var(--color-white);
   font-family: var(--font-Radley);
   font-weight: 400;
   font-style: normal;
-  font-size: 24px;
-  margin-top: 5px;
+  font-size: 12px;
+  margin: 5px 5px 0 0;
 }
 
-.custom-btn:hover {
+.container-cards .btn:hover {
   color: var(--color-white);
   padding: 10px;
   transition: 0.8s;
 }
-.custom-btn:focus {
+.container-cards .btn:focus {
   /* Muda a cor da sombra quando o botão recebe foco */
   box-shadow: 0 0 10px rgba(3, 6, 158, 0.5);
 }
@@ -109,7 +118,7 @@ footer {
   display: flex;
   justify-content: center;
   text-align: center;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   color: white;
 }
