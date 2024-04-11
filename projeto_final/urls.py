@@ -38,7 +38,7 @@ router.register('cadastro', AnimalViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', home),
+    path('', home),
     path('pesquisa/', pesquisa_animal, name='pesquisa_animal'),
     path('cadastrarAnimal/', criar_animal, name='criar_animal'),
     path('detalhes/<uuid:animal_id>/', detalhes_animal, name='detalhes_animal'),
