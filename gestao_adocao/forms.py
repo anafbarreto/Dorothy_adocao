@@ -28,18 +28,3 @@ class AdotanteForm(forms.ModelForm):
             'disposicao_fisica_emocional': 'Possui disposição física e emocional para cuidar do animal?',
             'animal_adotado': 'Qual animal deseja adotar?'
         }
-
-        
-        
-        # retirar trecho abaixo 
-        
-    # def __init__(self, *args, **kwargs):
-    #     super().__init__(*args, **kwargs)
-    #     #self.fields['animal_adotado'].queryset = Animal.objects.filter(adotado=False)
-    #     self.fields['animal_adotado'].widget.choices = [(animal.id, animal.nome) for animal in self.fields['animal_adotado'].queryset]
-
-# class AdocaoForm(forms.ModelForm):
-#     class Meta:
-#         model = Adocao
-#         fields = ['adotante', 'termo_aceito']
-#         #fields = ['animais', 'adotante', 'termo_aceito']

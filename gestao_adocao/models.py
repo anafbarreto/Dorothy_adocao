@@ -35,26 +35,3 @@ class Adotante(models.Model):
         verbose_name = 'Adotante'
         verbose_name_plural = 'Adotantes'
         ordering = ['nome'] 
-        
-        ### AQUI NÃO VEJO NECESSIDADE DESSA CLASS ja que a classe adotante ja esta salvado 
-        #### o registro da adocao
-
-# class Adocao(models.Model):
-#     id = models.AutoField(primary_key=True)
-#     adotante = models.ForeignKey(Adotante, on_delete=models.PROTECT)  # Adotante associado à adoção
-#     termo_aceito = models.BooleanField(default=False)  # Indica se o termo de responsabilidade foi aceito
-#     data = models.DateTimeField(auto_now_add=True)  # Data da adoção
-    
-#     def save(self, *args, **kwargs):
-#         # Verifica se há um adotante associado à adoção e atribui o valor do termo de responsabilidade
-#         if self.adotante:  
-#             self.termo_aceito = self.adotante.termo_responsabilidade  
-#         super().save(*args, **kwargs) 
-    
-#     def __str__(self):
-#         return f'{self.adotante}, {self.termo_aceito}'
-    
-#     class Meta: 
-#         verbose_name = 'Adocao'
-#         verbose_name_plural = 'Adocoes'
-#         ordering = ['-data']
