@@ -1,14 +1,16 @@
 from django.db import models
 from django.core.exceptions import ValidationError
+from cadastro_animal.models import Animal
 
 class Adotante(models.Model):
     id = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=50)  # Nome do adotante
-    cpf = models.CharField(max_length=11, unique=True)  # CPF do adotante
-    idade = models.IntegerField()  # Idade do adotante
-    telefone = models.CharField(max_length=15)  # Telefone do adotante
-    email = models.EmailField(max_length=50, unique=True)  # E-mail do adotante
-    endereco = models.CharField(max_length=50)  # Endereço do adotante
+    cpf = models.CharField(max_length=11, unique=True)  #Restrição para valor correto de CPF
+    idade = models.IntegerField()  
+    telefone = models.CharField(max_length=15)  
+    email = models.EmailField(max_length=50, unique=True)  
+    endereco = models.CharField(max_length=50)
+    animal_adotado = models.ForeignKey(Animal, on_delete=models.SET_NULL, null=True, blank=True) #Pega os animais
     termo_responsabilidade = models.BooleanField(default=False)  # Indica se o adotante aceitou o termo de responsabilidade
     espaco = models.BooleanField(default=False)  # Indica se o adotante possui espaço adequado para o animal
     tempo = models.BooleanField(default=False)  # Indica se o adotante possui tempo disponível para cuidar do animal

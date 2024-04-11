@@ -18,9 +18,12 @@
                 Adoção realizada com sucesso!
             </div>
         {% else %}
-            <form action="" method="POST" id="form">
+            <!-- <form action="" method="POST" id="form">
                 {% csrf_token %}
-                {% bootstrap_form form %}
+                {% bootstrap_form form %} -->
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}   
                 <button type="submit" class="btn btn-primary btn-block">Finalizar adoção</button>
             </form>
         {% endif %}
