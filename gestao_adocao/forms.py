@@ -3,9 +3,11 @@ from .models import Adotante, Adocao
 from cadastro_animal.models import Animal
 
 class AdotanteForm(forms.ModelForm):
+    
+    animal_adotado = forms.ModelChoiceField(queryset=Animal.objects.filter(adotado=False), required=False)
+
     class Meta:
         model = Adotante
-        animal = forms.ModelChoiceField(queryset=Animal.objects.filter(adotado=False), label="Nome do animal", to_field_name='nome')
         fields = ['nome', 'cpf', 'idade', 'telefone', 'email', 'endereco', 'espaco', 'tempo', 'ciente_custos', 'disposicao_fisica_emocional', 'termo_responsabilidade', 'animal_adotado']
         labels = {
             'nome': 'Nome',
@@ -21,6 +23,10 @@ class AdotanteForm(forms.ModelForm):
             'disposicao_fisica_emocional': 'Possui disposição física e emocional para cuidar do animal?',
             'animal_adotado': 'Qual animal deseja adotar?'
         }
+    # def __init__(self, *args, **kwargs):
+    #     super().__init__(*args, **kwargs)
+    #     #self.fields['animal_adotado'].queryset = Animal.objects.filter(adotado=False)
+    #     self.fields['animal_adotado'].widget.choices = [(animal.id, animal.nome) for animal in self.fields['animal_adotado'].queryset]
 
 class AdocaoForm(forms.ModelForm):
     class Meta:
