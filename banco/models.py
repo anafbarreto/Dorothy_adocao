@@ -9,7 +9,7 @@ class Adotante(models.Model):
     telefone = models.CharField(max_length=15)
     email = models.EmailField(max_length=50, unique=True)
     endereco = models.CharField(max_length=50)
-    termo_responsabilidade = models.BooleanField()
+    termo_responsabilidade = models.BooleanField(default=False)
     espaco = models.BooleanField()
     tempo = models.BooleanField()
     ciente_custos = models.BooleanField()
@@ -20,6 +20,10 @@ class Adotante(models.Model):
             self.termo_responsabilidade = False
         else:
             self.termo_responsabilidade = True
+    
+    def save(self, *args, **kwargs):
+        self.validate_termo_responsabilidade()  # Chamando o método de validação do termo de responsabilidade
+        super().save(*args, **kwargs)
             
     def __str__(self): 
         return f'{self.nome}, {self.email}, {self.telefone}, {self.termo_responsabilidade}'
@@ -29,26 +33,26 @@ class Adotante(models.Model):
         verbose_name_plural = 'Adotantes'
         ordering = ['nome'] 
         
-class adocao(models.Model):
-    id = models.AutoField(primary_key=True)
-    animais = models.ForeignKey(Animal, on_delete=models.PROTECT)
-    adotante = models.ForeignKey(Adotante, on_delete=models.PROTECT)
-    termo_aceito = models.BooleanField() 
-    data = models.DateTimeField(auto_now_add=True)
+# class adocao(models.Model):
+#     id = models.AutoField(primary_key=True)
+#     animais = models.ForeignKey(Animal, on_delete=models.PROTECT)
+#     adotante = models.ForeignKey(Adotante, on_delete=models.PROTECT)
+#     termo_aceito = models.BooleanField() 
+#     data = models.DateTimeField(auto_now_add=True)
     
-    #Verifica se o termo de responsabilidade foi aceito
-    def save(self, *args, **kwargs):
-        if self.adotante:  # Verifica se há um adotante associado
-            self.termo_aceito = self.adotante.termo_responsabilidade  # Atribui o valor de termo_responsabilidade a termo_aceito
-        super().save(*args, **kwargs) # Termo aceito vai receber o valor de termo_responsabilidade (True ou False)
+#     #Verifica se o termo de responsabilidade foi aceito
+#     def save(self, *args, **kwargs):
+#         if self.adotante:  # Verifica se há um adotante associado
+#             self.termo_aceito = self.adotante.termo_responsabilidade  # Atribui o valor de termo_responsabilidade a termo_aceito
+#         super().save(*args, **kwargs) # Termo aceito vai receber o valor de termo_responsabilidade (True ou False)
     
-    def __str__(self):
-        return f'{self.animais}, {self.adotante}, {self.termo_aceito}'
+#     def __str__(self):
+#         return f'{self.animais}, {self.adotante}, {self.termo_aceito}'
     
-    class Meta: # Alterando o nome das bases dentro do admin
-        verbose_name = 'Adocao' # Nome do formulario'
-        verbose_name_plural = 'Adocoes'
-        ordering = ['-data'] 
+#     class Meta: # Alterando o nome das bases dentro do admin
+#         verbose_name = 'Adocao' # Nome do formulario'
+#         verbose_name_plural = 'Adocoes'
+#         ordering = ['-data'] 
 
 
         
