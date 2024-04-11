@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Adoção de Animais</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+{% extends 'home.html' %}
+
+{% block title %}
+    Formulário de Adoção de Animais
+{% endblock %}
+
+{% block content %}
     <div class="container">
         <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
             <h1 class="text-body-emphasis">Formulário de Adoção de Animais</h1>
@@ -18,46 +16,15 @@
                 Adoção realizada com sucesso!
             </div>
         {% else %}
-            <!-- <form action="" method="POST" id="form">
+            <form action="" method="POST" id="form">
                 {% csrf_token %}
-                {% bootstrap_form form %} -->
-            <form method="POST">
+                {% bootstrap_form form %}
+            <!-- <form method="POST">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <!-- <div class="mb-3">
-                    <input type="hidden" id="id_animal_adotado" name="animal_adotado" value="{{ form.animal_adotado.value }}">
-                </div>    -->
+                {{ form.as_p }} -->
+
                 <button type="submit" class="btn btn-primary btn-block">Finalizar adoção</button>
             </form>
         {% endif %}
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- <script>
-        document.getElementById('id_animal_adotado').value = document.getElementById('animal_adotado').value;
-        document.getElementById('animal_adotado').addEventListener('change', function() {
-            document.getElementById('id_animal_adotado').value = this.value;
-        });
-    </script> -->
-</body>
-</html>
-
-
-<!-- {% load bootstrap5 %}
-{% block principal %}
-
-  <h1 class="text-body-emphasis">Formulário de Adoção de Animais</h1>
-
-  {% if sucesso %}
-    <p class="alert alert-success">Adoção realizada com sucesso!</p>
-  {% else %} 
-  
-  <form action="" method="POST" id="form">
-    {% csrf_token %}
-    {% bootstrap_form form %}
-    <button type="submit" class="btn btn-primary btn-block">Finalizar adoção</button>
-  </form>
-  
-  {% endif %} 
-
-{% endblock %} -->
+{% endblock %}
