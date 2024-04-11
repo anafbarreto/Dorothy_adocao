@@ -1,70 +1,58 @@
+{% extends "home.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Squad Dorothy Vaughan" />
-    <meta name="description" content="Abrigo de animais - desafio final" />
-    <title>Cadastro de Funcionario</title>
-    {% load bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
+{% load bootstrap5 %}
+{% block content %}
+<style>
+  .container {
+    padding-top: 20px; /* Adiciona espaço no topo */
+    padding-bottom: 20px; /* Adiciona espaço na parte inferior */
+  }
 
-    <link rel="stylesheet" href="{% static 'css/search.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Radley:ital@0;1&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sigmar+One&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="{% static 'css/cadastro_funcionario.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/var.css' %}" />
-  </head>
-  <body>
-    <header class="header">
-      <span class="dorothy">Dorothy</span> <span class="adocao">Adoção</span>
-      <a href="/home" title="informacoes" class="pag_link">Home</a>
-      <a href="#" title="informacoes" class="pag_link">Quem somos</a>
-      <a href="#parceiros" title="Parcerias" class="pag_link"
-        >Seja nosso parceiro</a
-      >
-      <a href="/login" title="Login" class="pag_link login_link">Entrar</a>
-    </header>
+  .text-center {
+    margin-bottom: 20px; /* Adiciona espaço abaixo do texto centralizado */
+  }
 
-    <section>
-      {% if sucess %}
-      <p class="alert alert-success">Cadastro realizado com sucesso</p>
-      {% else %}
-      <form method="POST" enctype="multipart/form-data" class="container-box">
-        {% csrf_token %}
-        <label class="title_form">Cadastro Parceiro</label>
-        <div class="form">{{ form.as_p }}</div>
-        <button type="submit" class="btn btn-warning">Salvar</button>
-      </form>
-      {% endif%}
-    </section>
+  .blue-box {
+    background-color: #144484; /* Cor azul */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Borda arredondada */
+    max-width: 400px; /* Largura máxima da caixa */
+    margin: auto; /* Centraliza horizontalmente */
+  }
 
-    <footer>
-      Desenvolvido por Squad Dorothy Vaughan
-      <a
-        href="https://github.com/anafbarreto/Abrigo_animais"
-        title="Página do projeto no github"
-        class="github_link"
-      >
-        <img
-          src="{% static 'icon/github.png' %}"
-          class="github_icon"
-          alt="Ícone GitHub"
-        />
-      </a>
-    </footer>
-  </body>
-</html>
+  .blue-box img {
+    width: 100%; /* Garante que a imagem se ajuste à largura da caixa */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Permite definir margens automáticas */
+    margin: auto; /* Centraliza a imagem horizontalmente */
+  }
+
+  .blue-box hr {
+    margin-top: 20px; /* Adiciona espaço acima da linha */
+    margin-bottom: 20px; /* Adiciona espaço abaixo da linha */
+    border-color: #ffffff; /* Cor da linha */
+  }
+</style>
+
+<div class="container-fluid d-flex flex-column justify-content-between min-vh-100">
+  <div>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="text-center">
+          <h2>Seja nosso parceiro</h2>
+          <p>Olá!</p>
+          <p>Estamos super felizes por você estar aqui!</p>
+          <p>Você sabia que juntos podemos transformar a vida de muitos animais? Sim, é verdade! E é por isso que estamos buscando amigos como você para se juntar à nossa família de parceiros.</p>
+          <p>Se você faz parte de uma ONG de resgate, um abrigo, uma clínica veterinária, uma pet shop ou qualquer empresa que ama animais tanto quanto nós, temos uma proposta: que tal unirmos forças?</p>
+          <p>Acreditamos que a colaboração é a chave para criar um mundo onde cada animalzinho tenha um lar cheio de amor e cuidado. E cada gesto conta – seja através de doações, patrocínios, eventos especiais ou simplesmente compartilhando conhecimento e recursos.</p>
+          <p>Vamos juntos espalhar a palavra sobre a adoção responsável e garantir dias mais felizes para nossos amigos de quatro patas.</p>
+          <p>Se essa ideia aquece seu coração, não hesite! Mande um e-mail para <a href="mailto:squaddorothyvaughan@gmail.com">squaddorothyvaughan@gmail.com</a> e vamos conversar sobre como você pode fazer parte dessa linda jornada.</p>
+          <p>Esperamos ansiosamente pelo seu contato!</p>
+          <!-- Botão de voltar -->
+          <a href="#" onclick="history.back()" class="btn btn-secondary">Voltar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
