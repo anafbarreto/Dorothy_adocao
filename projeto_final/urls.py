@@ -30,7 +30,6 @@ from cadastro_animal import views
 
 from django.contrib import admin
 from gestao_adocao.views import adocao
-from funcionarios.views import cadastro_funcionario
 
 router = routers.DefaultRouter()
 router.register('cadastro', AnimalViewSet)
@@ -47,7 +46,6 @@ urlpatterns = [
     path('excluir_animal/<uuid:animal_id>/', excluir_animal, name='excluir_animal'),
     path('editar_animal/<uuid:animal_id>/', editar_animal, name='editar_animal'),
     path('quem-somos/', views.quemsomos, name='quem_somos'),
-    path('cadastro_funcionario',cadastro_funcionario, name='cadastro_funcionario'),
     path('', include(router.urls)),
     path('adocao/', adocao),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

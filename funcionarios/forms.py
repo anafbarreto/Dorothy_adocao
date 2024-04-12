@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import AuthenticationForm
-from funcionarios.models import funcionarios
+from funcionario.models import funcionarios
 from django.contrib.auth.hashers import make_password
 
 class LoginForm(AuthenticationForm):

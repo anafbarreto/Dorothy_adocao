@@ -10,14 +10,17 @@
         alt="Avatar mulher com gatinho"
       />
       <br />
-      {% if form.errors %}
-      <p>Usuário ou senha inválidos. Por favor, tente novamente.</p>
-      {% endif %}
-      <form class="login-form" method="post">
-        {% csrf_token %} {{ form.as_p }}
-
+      <form action="{% url 'login' %}" method="POST" id="login-form" novalidate>
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email">
+        </div>
+        <div class="mb-3">
+          <label for="senha" class="form-label">Senha</label>
+          <input type="password" class="form-control" id="senha" name="senha">
+        </div>
         <button type="submit" class="button_modal">Login</button><br /><br />
-        <a href="/cadastro_funcionario" class="link_modal">Cadastre-se</a>
       </form>
     </div>
 

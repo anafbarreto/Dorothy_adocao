@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap5',
-    'banco',
     'gestao_adocao',
     'cadastro_animal',
     'rest_framework',
