@@ -46,6 +46,7 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 
 1. Jane criou o aplicativo detalhes animal e Thais contribuiu com ajustes.
 2. Jane elaborou o template quemsomos.
+3. Maitê Soares auxiliou na inserção da pagina Seja parceiro 
 
 ### Criar um sistema de gerenciamento das adoções:
 
@@ -56,6 +57,7 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 1. Clarice criou o aplicativo gestão de adoção
 2. Após investigar sites de adoção, a Squad Doroty Vaughan optou por utilizar um termo de responsabilidade para autorizar a adoção
 3. Clarice modificou algumas restrições no modelo inicial do banco para cumprir os requistos de adoção
+4. Maria Carolina e Anafbarreto contribuiram para a lógica de exibição dos animais adotados
 
 ### Criar barra de pesquisa:
 
@@ -72,8 +74,7 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 
 #### O que foi feito:
 
-1.
-2.
+1. Maitê Soares criou as models do admin e Simone auxiliou.
 
 <br><br><br>
 
