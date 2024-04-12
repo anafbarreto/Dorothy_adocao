@@ -30,8 +30,6 @@ def login_view(request):
             messages.error(request, 'Email não encontrado. Por favor, tente novamente.')
     return render(request, 'login.html')
 
-
-        
         
 def pagina_apos_login(request):
     animais = Animal.objects.all()
