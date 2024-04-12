@@ -26,8 +26,9 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 
 #### O que foi feito:
 
-1. O squad discutiu a modelagem do banco;
-2. Anafbarreto fez as primeiras configurações do projeto
+1. O squad discutiu a modelagem do banco.
+2. Ana Barreto fez as primeiras configurações do projeto.
+3. Ana Barreto cirou a função extra funcionários onde o admin pode cadastrar funcionários e esses, podem cadastrar, editar e excluir os animais.
 
 ### Criar pagina inicial:
 
@@ -37,7 +38,9 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 
 1. Maria Carolina criou barra de pesquisa e fluxo de pesquisa.
 2.  Maria Carolina criou a renderização dos dados dos animais para o template home, juntamente a estilização dos cards com css e bootstrap.
-3. Isadora criou o template com a header e o footer
+3. Isadora criou o template com a header e o footer.
+4. Ana Barreto contribuiu com ajustes no frontend.
+5. Maitê Soares contribuiu com ajustes no frontend.
 
 ### Criar pagina com o detalhamento dos animais:
 
@@ -47,7 +50,7 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 
 1. Jane criou o aplicativo detalhes animal e Thais contribuiu com ajustes.
 2. Jane elaborou o template quemsomos.
-3. Maitê Soares auxiliou na inserção da pagina Seja parceiro 
+3. Maitê Soares auxiliou na inserção da pagina Seja parceiro .
 
 ### Criar um sistema de gerenciamento das adoções:
 
@@ -55,10 +58,10 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 
 #### O que foi feito:
 
-1. Clarice criou o aplicativo gestão de adoção
-2. Após investigar sites de adoção, a Squad Doroty Vaughan optou por utilizar um termo de responsabilidade para autorizar a adoção
-3. Clarice modificou algumas restrições no modelo inicial do banco para cumprir os requistos de adoção
-4. Maria Carolina e Anafbarreto contribuiram para a lógica de exibição dos animais adotados
+1. Clarice Soares criou o aplicativo gestão de adoção.
+2. Após investigar sites de adoção, a Squad Doroty Vaughan optou por utilizar um termo de responsabilidade para autorizar a adoção.
+3. Clarice Soares modificou algumas restrições no modelo inicial do banco para cumprir os requistos de adoção.
+4. Maria Carolina e Ana Barreto contribuiram para a lógica de exibição dos animais adotados.
 
 ### Criar barra de pesquisa:
 
@@ -67,7 +70,7 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 #### O que foi feito:
 
 1. Maria Carolina, Criação da aplicação de cadastro do animal e upload de imagem.
-2. Maria Carolina,implementação da lógica de pesquisa por filtro e renderização do template 
+2. Maria Carolina, implementação da lógica de pesquisa por filtro e renderização do template. 
 
 ### Criar sistema de admin:
 
