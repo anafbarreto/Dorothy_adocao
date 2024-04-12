@@ -1,5 +1,5 @@
-from django.contrib.auth import authenticate, login
-from django.contrib import messages
+from funcionarios.models import funcionarios
+from django.contrib.auth import logout
 from django.shortcuts import render, redirect, get_object_or_404
 from cadastro_animal.models import Animal
 from cadastro_animal.forms import AnimalForm
@@ -9,16 +9,27 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.contrib.auth import authenticate, login
+
+
 def login_view(request):
     if request.method == 'POST':
         email = request.POST.get('email')
         senha = request.POST.get('senha')
-        usuario = authenticate(request, email=email, senha=senha)
-        if usuario is not None:
-            login(request, usuario)
-            return redirect('pagina_apos_login')
-        
-    return render(request, 'login.html')  
+        try:
+            funcionario = funcionarios.objects.get(email=email)
+            usuario = authenticate(request, email=email, senha=senha)
+            if usuario is not None:
+                login(request, usuario)
+                return redirect('pagina_apos_login')
+            else:
+                messages.error(request, 'Credenciais inválidas. Por favor, tente novamente.')
+        except funcionarios.DoesNotExist:
+            messages.error(request, 'Email não encontrado. Por favor, tente novamente.')
+    return render(request, 'login.html')
+
 
         
         
@@ -26,6 +37,9 @@ def pagina_apos_login(request):
     animais = Animal.objects.all()
     return render(request, 'pagina_apos_login.html', {'animais': animais})
 
+def logout_view(request):
+    logout(request)
+    return redirect('login') 
 
 def excluir_animal(request, animal_id):
     if request.method == 'POST':
