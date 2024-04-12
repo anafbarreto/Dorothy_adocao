@@ -37,6 +37,7 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 
 1. Maria Carolina criou barra de pesquisa e fluxo de pesquisa.
 2.  Maria Carolina criou a renderização dos dados dos animais para o template home, juntamente a estilização dos cards com css e bootstrap.
+3. Isadora criou o template com a header e o footer
 
 ### Criar pagina com o detalhamento dos animais:
 
