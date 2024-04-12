@@ -18,6 +18,9 @@ def home(request):
 def quemsomos(request):
     return render(request, 'quemsomos.html')
 
+def sejaparceiro(request):
+    return render(request, 'sejaparceiro.html')
+
 
 def pesquisa_animal(request):
     query = request.GET.get('q')
