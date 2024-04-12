@@ -1,5 +1,5 @@
 from funcionarios.models import funcionarios
-from django.contrib.auth import logout
+from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect, get_object_or_404
 from cadastro_animal.models import Animal
 from cadastro_animal.forms import AnimalForm
@@ -20,7 +20,7 @@ def login_view(request):
         senha = request.POST.get('senha')
         try:
             funcionario = funcionarios.objects.get(email=email)
-            usuario = authenticate(request, email=email, senha=senha)
+            usuario = authenticate(request, username=email, password=senha)
             if usuario is not None:
                 login(request, usuario)
                 return redirect('pagina_apos_login')
