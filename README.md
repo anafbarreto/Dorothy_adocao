@@ -63,8 +63,8 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 
 #### O que foi feito:
 
-1. Criação da aplicação de cadastro do animal e upload de imagem.
-2.
+1. Maria Carolina, Criação da aplicação de cadastro do animal e upload de imagem.
+2. Maria Carolina,implementação da lógica de pesquisa por filtro e renderização do template 
 
 ### Criar sistema de admin:
 
