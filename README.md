@@ -37,8 +37,8 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 #### O que foi feito:
 
 1. Maria Carolina criou barra de pesquisa e fluxo de pesquisa.
-2.  Maria Carolina criou a renderização dos dados dos animais para o template home, juntamente a estilização dos cards com css e bootstrap.
-3. Isadora criou o template com a header e o footer.
+2. Maria Carolina criou a renderização dos dados dos animais para o template home, juntamente a estilização dos cards com css e bootstrap.
+3. Isadora Bagatini criou o template com a header e o footer.
 4. Ana Barreto contribuiu com ajustes no frontend.
 5. Maitê Soares contribuiu com ajustes no frontend.
 
@@ -48,8 +48,8 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 
 #### O que foi feito:
 
-1. Jane criou o aplicativo detalhes animal e Thais contribuiu com ajustes.
-2. Jane elaborou o template quemsomos.
+1. Jane Souza criou o aplicativo detalhes animal e Thais dos Santos contribuiu com ajustes.
+2. Jane Souza elaborou o template quemsomos.
 3. Maitê Soares auxiliou na inserção da pagina Seja parceiro .
 
 ### Criar um sistema de gerenciamento das adoções:
@@ -78,7 +78,7 @@ O projeto final deste Bootcamp de Back-End Python visa consolidar e aplicar o co
 
 #### O que foi feito:
 
-1. Maitê Soares criou as models do admin e Simone auxiliou.
+1. Maitê Soares criou as models do admin e Simone Braghin auxiliou.
 
 <br><br><br>
 
