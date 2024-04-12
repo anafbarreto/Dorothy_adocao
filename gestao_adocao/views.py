@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from gestao_adocao.forms import AdotanteForm
+from cadastro_animal.models import Animal 
+from gestao_adocao.models import Adotante
 
 
 
@@ -15,5 +17,17 @@ def adocao(request):
         'form': form,
         'sucesso': sucesso
     }
+    # Obter todos os IDs de animais adotados
+    ids_adotados = Adotante.objects.values_list('animal_adotado_id', flat=True)
 
+    # Atualizar os animais adotados no banco de dados de cadastro de animais
+    Animal.objects.filter(id__in=ids_adotados).update(adotado=True)
+    Animal.objects.exclude(id__in=ids_adotados).update(adotado=False)
+
+    # Retornar uma resposta adequada
     return render(request, 'adocao.html', contexto)  # Renderiza o template adocao.html com o contexto
+
+
+
+
+
