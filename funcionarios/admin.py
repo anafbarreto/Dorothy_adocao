@@ -1,4 +1,4 @@
+from django.contrib import admin
+from funcionarios.models import funcionarios
 
-
-# # Register your models here.
-
+admin.site.register(funcionarios)
